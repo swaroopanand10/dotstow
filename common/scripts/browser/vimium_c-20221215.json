@@ -1,0 +1,55 @@
+{
+	"name": "Vimium C",
+	"@time": "12/15/2022, 3:21:38 PM",
+	"time": 1671097898437,
+	"environment": {
+		"extension": "1.99.90",
+		"platform": "linux",
+		"chromium": "106"
+	},
+	"exclusionRules": [
+		{
+			"passKeys": "/ d f g j k l r s x z ",
+			"pattern": ":https://www.youtube.com/"
+		},
+		{
+			"passKeys": "d f g s x z ",
+			"pattern": ":https://www.udemy.com/"
+		},
+		{
+			"passKeys": "d f g s x z ",
+			"pattern": ":https://www.linkedin.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://lms.iiitkottayam.ac.in/"
+		},
+		{
+			"passKeys": "f x ",
+			"pattern": ":https://0123movie.watch/"
+		},
+		{
+			"passKeys": "d s x z ",
+			"pattern": ":https://sflix.pro/"
+		},
+		{
+			"passKeys": "d f g r s x z ",
+			"pattern": ":https://vidstream.pro/"
+		},
+		{
+			"passKeys": "d g s x z ",
+			"pattern": ":https://codeforces.com/"
+		},
+		{
+			"passKeys": "d f g s x z ",
+			"pattern": ":https://www.twitch.tv/"
+		},
+		{
+			"passKeys": "f ",
+			"pattern": ":https://lichess.org/"
+		}
+	],
+	"keyupTime": 50,
+	"scrollStepSize": 150,
+	"vimSync": true
+}

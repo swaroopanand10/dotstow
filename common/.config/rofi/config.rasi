@@ -1,0 +1,31 @@
+//rofi config file
+
+configuration {
+  display-drun: "Applications:";
+  //display-window: "hello:";
+  drun-display-format: "{icon} {name}";
+  window-format: "{c} {w} {t}";
+  font: "JetBrainsMono Nerd Font 15";
+  modi: "window,run,drun";
+  show-icons: true;
+  icons-theme: "Papirus";
+
+    kb-remove-to-eol: "Alt+k";
+    kb-accept-entry: "Alt+j,Control+m,Return,KP_Enter";
+    kb-row-up: "Up,Control+p,Control+k";
+    kb-row-down: "Down,Control+n,Control+j";
+//  kb-mode-next: "Shift+Right,Control+Tab";
+//  kb-row-tab: "";
+    kb-row-left: "Control+Page_Up,Alt+h";
+    kb-row-right: "Control+Page_Down,Alt+l";
+}
+
+//themes
+//@theme "/usr/share/rofi/themes/dmenu.rasi"
+//@theme "/usr/share/rofi/themes/sidebar.rasi"
+/* @theme "customtheme.rasi" */
+/* @theme "~/.config/rofi/themes/mininal_outline.rasi" */
+/* @theme "~/.config/rofi/themes/arc_dark_colors.rasi" */
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+//@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+@theme "/usr/share/rofi/themes/DarkBlue.rasi"

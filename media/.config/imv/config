@@ -1,0 +1,9 @@
+[binds]
+
+# all ctrl keybindings not working(even default ones)
+<Ctrl-n> = next
+<Ctrl-p> = prev
+
+n = next
+p = prev
+b = exec echo $imv_current_file

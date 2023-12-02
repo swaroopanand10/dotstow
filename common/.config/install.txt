@@ -1,0 +1,280 @@
+# As of Now, This file will be used as a text file for storing all the program's names and their install methods.
+
+*). paru = yay -S paru
+1). bspwm = sudo pacman -S bspwm
+2). sxhkd = sudo pacman -S sxhkd
+3). alacritty = sudo pacman -S alacritty
+4). neovim = sudo pacman -S neovim (and also fix the colorscheme)
+5). feh = sudo pacman -S feh
+6). zsh = sudo pacman -S zsh
+7). zsh plugins-
+  antigen = make a dir "mkdir ~/.zsh/" and then install it by running "curl -L git.io/antigen > antigen.zsh" in that Dir
+    BUT THERE IS NOW NO NEED FOR ANY PLUGIN MANAGER as I only need 2 plugins - zsh syntax highlight and zsh auto suggesions
+    they can be added manually by git clone and source
+   a). git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.config/zsh/zsh-autosuggestions
+   b). git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/zsh-syntax-highlighting
+   and now just source all these two files in zshrc (which is already done)
+   there is even a better method-
+   paru -S zsh-syntax-highlighting zsh-autosuggestions
+   more plugins - fzf-tab-bin-git for completion using fzf
+   paru -S fzf-tab-bin-git 
+   
+
+8). polybar = sudo pacman -S polybar
+9). rofi = sudo pacman -S rofi
+10). dmenu = sudo pacman -S dmenu
+11). lxappearance-gtk3(for customizing themes) = sudo pacman -S lxappearance-gtk3 (or install just lxappearance if needed)
+12). pamac = sudo pacman -S pamac or yay -S pamac and chose the 1st aur version
+13). gparted = sudo pacman -S gparted (if needed)
+14). zathura = sudo pacman -S zathura 
+    also install pdf-poppler - sudo pacman -S zathura-pdf-poppler
+15). mpv = sudo pacman -S mpv
+16). yt-dlp = sudo pacman -S yt-dlp
+17). ff2mpv = git clone https://github.com/woodruffw/ff2mpv  -- A better method is mentioned below
+  -> Don't clone the repository, instead just copy paste the ff2mpv python script into mpv folder and then source that path into ff2mpv.json file in .mozzila(already done)        
+    (instructions are also mentioned at their github page)
+18). sxiv = sudo pacman -S sxiv 
+19). picom = sudo pacman -S picom (if needed)
+20). xsel = sudo pacman -S xsel
+21). polkir-gnome = sudo pacman -S polkit-gnome
+22). ueberzug = yay -S ueberzug (can also be installed with pip)
+23). playerctl = sudo pacman -S playerctl
+24). greenclip = yay -S rofi-greenclip (or just greenclip)
+25). librewolf = yay -S librewolf-bin
+26). xournalpp = sudo pacman -S xournalpp
+27). axel = sudo pacman -S axel (it's like IDM)
+28). ripgrep = sudo pacman -S ripgrep (important for grep function in nvim)
+29). python3 = sudo pacman -S python3
+30). pip = sudo pacman -S python-pip
+31). pynvim = pip install pynvim (for neovim python support)
+     Or, paru -S python-pynvim
+32). nodejs = sudo pacman -S nodejs
+33). npm = sudo pacman -S npm 
+34). neovim node support = sudo npm i -g neovim
+35). touchegg = yay -S touchegg 
+     Now enable the touchegg service manually- 
+     $ sudo systemctl enable touchegg.service
+     $ sudo systemctl start touchegg
+
+36). auto-cpufreq = yay -S auto-cpufreq
+     Now perform these extra 3 steps
+     systemctl start auto-cpufreq    # for starting the service 
+     systemctl status auto-cpufreq   # for viewing the status of the service
+     systemctl enable auto-cpufreq   # for enabling the service to persist even after restarts
+
+38). i3-gaps = sudo pacman -S i3-gaps (don't use it anymore,but still if needed)
+39). Fonts of your choice from nerdfonts or awesome-fonts etc. like jetbrains mono
+     also to refresh the fonts cache sometimes we have to run fc-cache -fv command
+     maybe installing 2 fonts at once shows error, so do not do that;
+40). ranger = sudo pacman -S ranger
+41). lightdm = sudo pacman -S lightdm
+42). dunst = sudo pacman -S dunst
+
+(all the themes are already backedup in github- now removed the backup from gnu stow)
+{
+43). materia-gtk-theme = sudo pacman -S materia-gtk-theme
+44). adwaita-dark = yay -S adwaita-dark
+45). adwaita-icon-theme = sudo pacman -S adwaita-icon-theme  
+
+# An article at archwiki said that it is recommended to install hicolor-icon-theme  
+}
+
+46). go for arch = yay -S go (and the path for go is already added in zshrc and bashrc)
+47). tmux = sudo pacman -S tmux  (config file in ~/.config/tmux/tmux.conf)
+48). tmux ressurect = git clone https://github.com/tmux-plugins/tmux-resurrect ~/.config/tmux/tmux-resurrect/  (and then source this file on the bottom of tmux.conf)
+     (you many have to edit some file to change the default directry for saving the sessions)
+     There is better way to install tmux-resurrect by aur - just run paru -S tmux-resurrect and source the file in tmux.conf(already done)
+49). qbittorrent = sudo pacman -S qbittorrent
+50). bat = sudo pacman -S bat
+51). ncmpcpp = sudo pacman -S ncmpcpp (for cloning music run this command - git clone git@gitlab.com:swaroopanand10/music.git ./Music)
+52). mpd = sudo pacman -S mpd
+53). mpc = sudo pacman -S mpc
+54). SwapnilSoni1999/spotify-dl = npm install -g spotify-dl
+55). lf file manager = sudo pacman -S lf
+56). fzf = sudo pacman -S fzf
+57). rofi_calc = sudo pacman -S rofi-calc
+58). newsboat = sudo pacman -S newsboat
+59). betterlockscreen = yay -S betterlockscreen (after installing run the command- betterlockscreen -u /path/to/image) 
+60). urlscan = yay -S urlscan 
+61). ytfzf = paru -S ytfzf
+62). ff2mpv = paru -S ff2mpv-go-git (go version)
+63). xdo = pacman -S xdo
+64). flake8 = pacman -S flake8
+65). python-black = paru python-black
+66). nemo = pacman -S nemo (set the default terminal by - gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty)
+67). qalc = pacman -S qalc
+68). vimv = paru -S vimv  (a tool for bulk renaming, other options are vidir, edir etc)
+69). cloudflare-warp- paru -S cloudflare-warp-bin
+70). cmake = paru -S cmake
+71). lsd = paru -S lsd
+72). networkmanager-applet= paru -S networkmanager-applet (very important for managing networks in wms)
+73). xbacklight = paru -S xorg-xbacklight (for managing brightness from keyboard media keys)[maybe it only works with intel chip]
+74). gnome-keyring = paru -S gnome-keyring (for vscode errer)
+75). vs-code = paru -S visual-studio-code-bin
+76). rust = paru -S rustup and then run rustup default stable
+77). tree = paru -S tree //program to show directory tree structure
+78). simple-mtpfs and mtpfs = for mounting android in linux if needed
+
+
+Some other programs which also can be used if needed
+*). clipboard manager like xclip, copyQ, clipman etc 
+*). some login or lock-manager like = i3lock, ly, lightdm etc
+*). some gui filemanager like = pcmanfm, thunar
+*). vimhexokisane/vimcolorizer
+*). go language (can be needed as a dependency for many programs like hexokisane)
+*). some other cli file manager like = lf, nnn etc.
+*). fzf and ytfzf = fuzzyfinder and youtube fuzzyfinder
+*). some torrent client = like qbittorrent
+
+
+# A very good free vpn
+   -> cloudfare warp
+   install - paru cloudflare-warp-bin
+   enable and start service - systemctl start warp-svc.sevice and systemctl enable warp-svc.service (after installing)
+   OR, if the above one is showing error, then 
+   enable and start service - systemctl enable --now warp-svc (after installing)
+   register on new install - warp-cli register
+   to connect - warp-cli connect
+
+# steam
+  after installing steam it generally throws an online error while opening
+  for that to get resolved try these things-
+  1). start and enable systemd-resolved - systemctl enable --now systemd-resolved.service
+  2). start and enable nscd service - systemctl enable --now nscd.service
+  3). try to ping and edit the /etc/resolv.conf file
+
+# mongodb
+  paru -S mongodb-bin
+  and then enable and start the service
+  sudo systemctl enable --now mongodb
+  and then run mongosh to check if it is working 
+
+# repos I have maintained
+  cfg-  managed by bare git repository
+  nvim - for nvim
+  chess - for chess solutions
+  prg - for programming structures
+  music - for downloaded musics
+
+
+
+# setting up hyprland for wayland
+  paru -S hyprland-bin
+  paru -S hyprpaper-git 
+  paru -S swaybg 
+  paru -S waybar-hyprland-git
+  paru -S pamixer # same as amixer but for pulseaudio
+  paru -S amixer
+  paru -S playerctl 
+  paru -S brightnessctl
+  paru -S rofi-lbonn-wayland
+  paru -S udiskie # used for removable media management
+  paru -S wl-clipboard #for copy-paste utilities
+  paru -S lsix-git # for image support in foot
+  paru -S foot
+  paru -S kitty
+  paru -S grimblast-git #for screenshots
+  paru -S cliphist # for clipboard
+  paru -S dunst
+  paru -S tesseract tesseract-data-eng
+  paru -S joshuto
+  paru -S swaylock
+  paru -S chafa
+  paru -S fd
+  paru -S wlr-randr # clone for xrandr
+  paru -S wlprop # clone of xprop
+  paru -S alacritty-sixel-git #fork of alacritty with sixel image support
+  paru -S nwg-look-bin #for setting gtk3 theme in wayland
+  paru -S xdg-desktop-portal-hyprland-git
+  paru -S xdg-desktop-portal
+  paru -S swayidle # for autosleep
+  paru -S wlogout # a power menu for logging shutdown, restart, logout etc untilites
+  paru -S wf-recorder # screenrecorder
+  paru -S slurp # screenselecter
+  paru -S ueberzugpp ctpv #for image previews in lf
+
+# some themes (currently using in wayland and also installed through paru)
+  paru -S dracula-gtk-theme
+  paru -S dracula-icons-git
+  paru -S dracula-cursors-git
+  paru -S faba-icon-theme (currently using in volume and brightness scripts)
+
+#how to autologin using sddm
+  install sddm- paru -S sddm
+  then enable it - sudo systemctl enable --now sddm.service
+  then make a file "/etc/sddm.conf" and then write this in it - 
+  [Autologin]
+  User=swaroop
+  Session=hyprland
+  and save
+
+# setting up bluetooth in archlinux
+  paru -S bluez bluez-utils blueman
+  sudo systemctl enable --now bluetooth.service
+  bluetooth headsets not working for now for some reason on wms
+
+#emacs
+  paru -S emacs
+  git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs;
+  ~/.config/emacs/bin/doom install
+
+
+#lf installing on wayland
+ To install on wayland with image previews some steps should be taken differently(installing normally for x11)
+ install lf version with sixel support - (will work only on terminals with sixel support like foot or wezterm)
+ paru -S lf-sixel-git
+ Now install some other things for previews-
+ ffmpegthumbnailer
+ ImageMagick
+ poppler
+ epub-thumbnailer
+ wkhtmltopdf
+ other tools on this - https://github.com/horriblename/lfimg-sixel
+
+
+# audio setup using pipewire(replacing pulseauido)
+  paru -S pipewire pipewire-audio wireplumber pipewire-alsa pipewire-jack pipewire-pulse
+  check that if the daemon is running or not by
+  systemctl --user status pipewire (including --user is must)
+  pamixer and amixer both seem to work fine with pipewire maybe because of pipewire-alsa and pipewire-alsa clients
+
+
+# backing up browser data
+ until now backing up browser config file on gitlab private repo seems to be the best way.
+ to clone the remote repos run following commands -
+ git clone git@gitlab.com:swaroopanand10/bravesoftware.git ~/.config/BraveSoftware/
+ git clone git@gitlab.com:swaroopanand10/mozilla.git ~/.mozilla/
+
+
+# stuff needed for nvim(not for lazyvim) -
+pynvim -   pip install pynvim
+neovim-node - npm i -g neovim (do it with sudo )
+ripgrep - paru -S ripgrep
+
+
+# mpv youtube video watching
+ yt-dlp "https://www.youtube.com/watch?v=VZD2eZBZXao" -o - | mpv --force-seekable=yes - # this solves the speed issue but breaks seeking
+ so better method is mpv --ytdl-format=best as it stops throttling
+
+
+# if problem installing packages because of servers of keyring
+   sudo pacman -Sy endeavouros-keyring
+   sudo pacman -Sy archlinux-keyring
+
+# if failed password 3 times
+faillock --user swaroop --reset
+
+
+# debugging softwares
+edb-debugger - a good gui debugger
+radare2 - cli debugging program
+iaito - gui frontend for radare2
+gdb-peda - good frontend for gdb
+pwndbg with splitmind - good combination with tmux splitting
+
+
+# for managing dotfiles use gnu stow
+paru -S stow
+
+# for waybar capslock indication to work, add your user to input group
+gpasswd -a swaroop input

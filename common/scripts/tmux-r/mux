@@ -1,0 +1,15 @@
+#!/bin/sh
+pgrep -vx tmux > /dev/null && \
+tmux new -d -s delete-me && \
+tmux run-shell /usr/share/tmux-resurrect/scripts/restore.sh && \
+tmux kill-session -t delete-me && \
+tmux attach || tmux attach
+
+# #didn't worked for startup
+# mux = $(pgrep -vx tmux > /dev/null && \
+# 		tmux new -d -s delete-me && \
+# 		tmux run-shell ~/.config/tmux/tmux-resurrect/scripts/restore.sh && \
+# 		tmux kill-session -t delete-me && \
+#     tmux attach || tmux attach)
+#
+# kitty -e mux

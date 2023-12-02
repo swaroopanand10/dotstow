@@ -1,0 +1,352 @@
+# Scid options file
+# Version: 5.0.2
+# This file contains commands in the Tcl language format.
+# If you edit this file, you must preserve valid its Tcl
+# format or it will not set your Scid options properly.
+
+set boardSize 100
+set boardStyle Merida1
+set language E
+set ::pgn::showColor 1
+set ::pgn::indentVars 1
+set ::pgn::indentComments 1
+set ::pgn::showPhoto 1
+set ::pgn::shortHeader 1
+set ::pgn::boldMainLine 1
+set ::pgn::stripMarks 0
+set ::pgn::symbolicNags 1
+set ::pgn::moveNumberSpaces 0
+set ::pgn::columnFormat 0
+set tree(order) frequency
+set optionsAutoSave 1
+set ::tree::mask::recentMask {}
+set ecoFile /usr/share/scid/scid.eco
+set suggestMoves 0
+set showVarPopup 0
+set showVarArrows 1
+set blunderThreshold 1.0
+set autoplayDelay 5000
+set animateDelay 200
+set boardCoords 0
+set moveEntry(AutoExpand) 0
+set moveEntry(Coord) 1
+set translatePieces 1
+set arrowLastMove 0
+set highlightLastMove 1
+set highlightLastMoveWidth 5
+set highlightLastMoveColor grey
+set glossOfDanger 0
+set locale(numeric) .,
+set spellCheckFile /usr/share/scid/spelling.ssp
+set autoRaise 1
+set windowsDock 1
+set showGameInfo 0
+set exportFlags(comments) 1
+set exportFlags(vars) 1
+set exportFlags(indentc) 0
+set exportFlags(indentv) 0
+set exportFlags(column) 0
+set exportFlags(symbols) 0
+set exportFlags(htmldiag) 0
+set exportFlags(convertNullMoves) 0
+set gameInfo(photos) 1
+set gameInfo(hideNextMove) 0
+set gameInfo(wrap) 0
+set gameInfo(fullComment) 0
+set gameInfo(showMarks) 1
+set gameInfo(showMaterial) 0
+set gameInfo(showFEN) 0
+set engineCoach1 {}
+set engineCoach2 {}
+set scidBooksDir /usr/share/scid/books
+set scidBasesDir /usr/share/scid/bases
+set ::book::lastBook {}
+set ::utils::sound::soundFolder /usr/share/scid/sounds
+set ::utils::sound::announceNew 0
+set ::utils::sound::announceForward 0
+set ::utils::sound::announceBack 0
+set ::tacgame::threshold 0.9
+set ::tacgame::blunderwarning false
+set ::tacgame::blunderwarningvalue 0.0
+set ::tacgame::levelMin 1200
+set ::tacgame::levelMax 2200
+set ::tacgame::levelFixed 1500
+set ::tacgame::randomLevel 0
+set ::tacgame::isLimitedAnalysisTime 1
+set ::tacgame::showblunder 1
+set ::tacgame::showblundervalue 1
+set ::tacgame::showblunderfound 1
+set ::tacgame::showmovevalue 1
+set ::tacgame::showevaluation 1
+set ::tacgame::isLimitedAnalysisTime 1
+set ::tacgame::analysisTime 10
+set ::tacgame::openingType new
+set ::tacgame::chosenOpening 0
+set ::sergame::chosenOpening 0
+set ::sergame::chosenEngine 0
+set ::sergame::useBook 1
+set ::sergame::bookToUse {}
+set ::sergame::startFromCurrent 0
+set ::sergame::coachIsWatching 0
+set ::sergame::timeMode timebonus
+set ::sergame::depth 3
+set ::sergame::movetime 0
+set ::sergame::nodes 10000
+set ::sergame::ponder 0
+set ::sergame::isOpening 0
+set ::uci::uciInfo(wtime3) 300000
+set ::uci::uciInfo(winc3) 10000
+set ::uci::uciInfo(btime3) 300000
+set ::uci::uciInfo(binc3) 10000
+set boardfile_lite F8Wood-l
+set boardfile_dark F8Wood-d
+set FilterMaxMoves 80
+set FilterMinMoves 5
+set FilterStepMoves 1
+set FilterMaxElo 2800
+set FilterMinElo 2100
+set FilterStepElo 100
+set FilterMaxYear 2023
+set FilterMinYear 2011
+set FilterStepYear 1
+set FilterGuessELO 1
+set lookTheme dark
+set ThemePackageFile {}
+set autoResizeBoard 1
+set isBatchOpening 0
+set isBatchOpeningMoves 12
+set isBatch 0
+set markTacticalExercises 0
+set scoreAllMoves 0
+set isAnnotateVar 0
+set isShortAnnotation 0
+set addScoreToShortAnnotations 0
+set annotateBlunders blundersonly
+set addAnnotatorTag 0
+set annotateMoves all
+
+set winWidth(.)  1024
+set winHeight(.) 570
+set winWidth(.helpWin)  77
+set winHeight(.helpWin) 35
+set winWidth(.spellcheckWin)  55
+set winHeight(.spellcheckWin) 25
+set winWidth(.statsWin)  60
+set winHeight(.statsWin) 13
+
+set winX(.helpWin)  13
+set winY(.helpWin)  54
+
+set analysisCommand {}
+set analysisChoices crafty
+
+set squareColor_lite {#f3d3a5}
+set squareColor_dark {#c36638}
+set whitecolor {#ffffff}
+set blackcolor {#000000}
+set highcolor {#b0d0e0}
+set bestcolor {#f0f0a0}
+set whiteborder {#000000}
+set blackborder {#ffffff}
+set borderwidth 0
+set pgnColor(Var) {}
+set pgnColor(Nag) {#cf6403}
+set pgnColor(Comment) {#008b00}
+set pgnColor(Current) steelBlue
+
+set optable(AvgPerf) 1
+set optable(Endgames) 1
+set optable(ExtraMoves) 1
+set optable(HighRating) 8
+set optable(MaxGames) 500
+set optable(MostFrequent) 6
+set optable(MostFrequentBlack) 1
+set optable(MostFrequentWhite) 1
+set optable(MoveOrders) 8
+set optable(MovesFrom) 1
+set optable(Newest) 5
+set optable(Oldest) 5
+set optable(Popular) 1
+set optable(Results) 1
+set optable(Shortest) 5
+set optable(ShortestBlack) 1
+set optable(ShortestWhite) 1
+set optable(Stats) 1
+set optable(Themes) 1
+set ::windows::stats::display(r2000) 0
+set ::windows::stats::display(r2100) 0
+set ::windows::stats::display(r2200) 0
+set ::windows::stats::display(r2300) 1
+set ::windows::stats::display(r2400) 1
+set ::windows::stats::display(r2500) 1
+set ::windows::stats::display(r2600) 1
+set ::windows::stats::display(y1900) 0
+set ::windows::stats::display(y1950) 0
+set ::windows::stats::display(y1960) 0
+set ::windows::stats::display(y1970) 0
+set ::windows::stats::display(y1980) 0
+set ::windows::stats::display(y1990) 0
+set ::windows::stats::display(y1995) 0
+set ::windows::stats::display(y2000) 1
+set ::windows::stats::display(y2002) 1
+set ::windows::stats::display(y2004) 1
+set ::windows::stats::display(y2006) 1
+set ::windows::stats::display(y2007) 1
+set ::windows::stats::display(y2008) 1
+set ::windows::stats::display(y2009) 1
+set ::windows::stats::display(y2010) 1
+set ::windows::stats::display(y2011) 1
+set ::windows::stats::display(y2012) 1
+set ::windows::stats::display(y2013) 1
+set ::windows::stats::display(y2014) 1
+set ::windows::stats::display(y2015) 1
+set ::windows::stats::display(y2016) 1
+set ::windows::stats::display(y2017) 1
+set ::windows::stats::display(y2018) 1
+set ::windows::stats::display(y2019) 1
+set ::windows::stats::display(y2020) 1
+set ::windows::stats::display(y2021) 1
+set ::windows::stats::display(y2022) 1
+set ::windows::stats::display(y2023) 1
+set startup(tip) 0
+set toolbar_state(bkm) 0
+set toolbar_state(boardsearch) 0
+set toolbar_state(closedb) 0
+set toolbar_state(copy) 0
+set toolbar_state(crosstab) 0
+set toolbar_state(eco) 0
+set toolbar_state(engine) 0
+set toolbar_state(finder) 0
+set toolbar_state(glist) 0
+set toolbar_state(gnext) 0
+set toolbar_state(gprev) 0
+set toolbar_state(headersearch) 0
+set toolbar_state(maint) 0
+set toolbar_state(materialsearch) 0
+set toolbar_state(newdb) 0
+set toolbar_state(newgame) 0
+set toolbar_state(open) 0
+set toolbar_state(paste) 0
+set toolbar_state(pgn) 0
+set toolbar_state(save) 0
+set toolbar_state(switcher) 0
+set toolbar_state(tmt) 0
+set toolbar_state(tree) 0
+set twinSettings(colors) No
+set twinSettings(comments) Yes
+set twinSettings(day) No
+set twinSettings(delete) Shorter
+set twinSettings(eco) No
+set twinSettings(event) No
+set twinSettings(month) Yes
+set twinSettings(moves) Yes
+set twinSettings(players) No
+set twinSettings(result) No
+set twinSettings(round) Yes
+set twinSettings(setfilter) Yes
+set twinSettings(site) Yes
+set twinSettings(skipshort) Yes
+set twinSettings(undelete) Yes
+set twinSettings(usefilter) No
+set twinSettings(variations) Yes
+set twinSettings(year) Yes
+
+set fontOptions(Regular) {{JetBrainsMono Nerd Font} 16 normal roman}
+set fontOptions(Menu) {{Noto Sans} 11 normal roman}
+set fontOptions(Small) {{Noto Sans} 9 normal roman}
+set fontOptions(Tiny) {{Noto Sans} 8 normal roman}
+set fontOptions(Fixed) {{Noto Sans Mono} 10 normal roman}
+
+set initialDir(report) .
+set initialDir(stm) .
+set initialDir(tex) .
+set initialDir(html) .
+set initialDir(pgn) .
+set initialDir(book) .
+set initialDir(base) {/run/media/swaroop/D_drive/Anand_all/Anand/CHESS/Chess stuff 2/Openings/OpeningPgns/e4/anishgiri}
+
+set exportStartFile(PGN) {}
+set exportEndFile(PGN) {}
+set exportStartFile(HTML) {<html>
+  <head>
+    <title>Scid export</title>
+    <style>
+      @media print {
+        table { page-break-inside: avoid; }
+      }
+    </style>
+  </head>
+  <body bgcolor="#ffffff">
+
+}
+set exportEndFile(HTML) {</body>
+  </html>
+}
+set exportStartFile(LaTeX) {\documentclass[10pt,twocolumn]{article}
+  % This is a LaTeX file generated by Scid.
+  % You must have the "chess12" package installed to typeset this file.
+
+  \usepackage{times}
+  \usepackage{a4wide}
+  \usepackage{chess}
+  \usepackage[T1]{fontenc}
+
+  \setlength{\columnsep}{7mm}
+  \setlength{\parindent}{0pt}
+
+  % Macros for variations and diagrams:
+  \newenvironment{variation}{\begin{quote}}{\end{quote}}
+  \newenvironment{diagram}{\begin{nochess}}{$$\showboard$$\end{nochess}}
+
+  \begin{document}
+}
+set exportEndFile(LaTeX) {\end{document}
+}
+
+set informant("!?") 0.5
+set informant("+-") 3.0
+set informant("+--") 5.5
+set informant("+/-") 1.5
+set informant("+=") 0.5
+set informant("?!") 0.5
+set informant("?") 1.5
+set informant("??") 3.0
+
+set ::fics::use_timeseal 0
+set ::fics::timeseal_exec timeseal
+set ::fics::port_fics 5000
+set ::fics::port_timeseal 5001
+set ::fics::login {}
+set ::fics::password {}
+set ::fics::usedefaultvars 1
+set ::fics::premoveEnabled 1
+set ::fics::consolebg black
+set ::fics::consolefg LimeGreen
+set ::fics::consoleheight 10
+set ::fics::consolewidth 40
+set ::fics::colseeking coral
+set ::fics::colgame grey70
+set ::fics::colgameresult SlateBlue1
+set ::fics::colficspercent khaki1
+set ::fics::server_ip 0.0.0.0
+set ::pinfo::wikipurl http://toolserver.org/~apper/pd/person/pnd-redirect
+set ::pinfo::dnburl http://d-nb.info/gnd
+set ::pinfo::SeeAlsoPND2WP http://ws.gbv.de/seealso/pnd2wikipedia/?format=seealso&id=
+set ::pinfo::wikipAPI http://de.wikipedia.org/w/api.php?action=query&format=xml
+set ::novag::referee OFF
+set ::docking::layout_list(1) {{MainWindowGeometry 1894x977+13+54} {{.pw vertical {}} {TPanedwindow {{.pw.pw0 horizontal 938} {TNotebook .nb .fdockmain} {TPanedwindow {{.pw.pw0.pw1 vertical 483} {TNotebook .tb2 .pgnWin} {TNotebook .tb3 {.fdockglistWin1 .commentWin}}}}}}}}
+set ::docking::layout_list(2) {{MainWindowGeometry 540x650+0+0} {{.pw vertical {}} {TNotebook .nb .fdockmain}}}
+set ::docking::layout_list(3) {{MainWindowGeometry 1024x532+0+0} {{.pw vertical {}} {TPanedwindow {{.pw.pw0 horizontal 413} {TNotebook .nb .fdockmain} {TPanedwindow {{.pw.pw0.pw1 vertical 270} {TNotebook .tb2 {.fdockpgnWin}} {TNotebook .tb3 .fdockglistWin1}}}}}}}
+set ::docking::layout_list(auto) {{MainWindowGeometry 1900x983+10+51} {{.pw vertical {}} {TPanedwindow {{.pw.pw0 horizontal 941} {TNotebook .nb .fdockmain} {TPanedwindow {{.pw.pw0.pw1 vertical 483} {TNotebook .tb2 .pgnWin} {TNotebook .tb3 {.fdockglistWin1 .commentWin}}}}}}}}
+set ::winGeometry(.commentWin) 530x220
+
+set ::autosave_opt {::windows::switcher::icons ::showEvalBar(.main) ::showMainEvalBarArrow ::glist_Layouts ::glist_ColOrder ::glist_ColWidth ::glist_ColAnchor ::glist_Sort ::glist_FindBar}
+set ::windows::switcher::icons 1
+set ::showEvalBar(.main) 1
+set ::showMainEvalBarArrow 1
+set ::glist_Layouts {RatingDate DateEvent Full}
+array set ::glist_ColOrder {DateEvent {7 3 4 5 6 1 23 8 9 10 0} ly.glistWin1 {7 1 2 3 4 5 6 23 22 8 9 10 11 12 13 14 15 16 0} NewLayout1 {20 7 3 4 5 6 1 2 23 8 19 10 9 16 17 22 21 18 11 12 13 14 15 0} ly.glistWin2 {7 3 4 5 6 1 2 23 8 10 9 16 17 22 21 18 11 12 13 14 15 0} NewLayout2 {20 7 3 4 5 6 1 2 23 8 19 10 9 16 17 22 21 18 11 12 13 14 15 0} NewLayout3 {20 7 3 4 5 6 1 2 23 8 19 10 9 16 17 22 21 18 11 12 13 14 15 0} Full {20 7 3 4 5 6 1 2 23 8 19 10 9 16 17 22 21 18 11 12 13 14 15 0} RatingDate {{7} {1} {2} {3} {4} {5} {6} {23} {22} {8} {9} {10} {11} {12} {13} {14} {15} {16} {0}}}
+array set ::glist_ColWidth {DateEvent {50 50 50 120 40 120 40 80 145 30 112 30 20 20 20 20 35 50 30 100 40 40 50 153} ly.glistWin1 {50 35 28 200 40 120 40 52 200 30 200 30 20 20 20 20 35 50 30 100 40 40 87 140} NewLayout1 {50 50 39 120 40 120 40 70 200 30 200 30 20 20 20 20 35 119 30 78 40 40 50 155} ly.glistWin2 {50 50 39 120 40 120 40 70 200 30 200 30 20 20 20 20 35 119 30 78 40 40 50 155} NewLayout2 {50 50 39 120 40 120 40 70 200 30 200 30 20 20 20 20 35 119 30 78 40 40 50 155} NewLayout3 {50 50 39 120 40 120 40 70 200 30 200 30 20 20 20 20 35 119 30 78 40 40 50 155} Full {50 50 39 120 40 120 40 70 200 30 200 30 20 20 20 20 35 119 30 78 40 40 50 155} RatingDate {{50} {50} {50} {120} {40} {120} {40} {80} {200} {30}  {200} {30} {20} {20} {20} {20} {35} {50} {30} {100} {40} {40} {50} {140}}}
+array set ::glist_ColAnchor {DateEvent {{e} {c} {c} {w} {c} {w} {c} {w} {w} {e}  {w} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {w}} ly.glistWin1 {e c c w c w c w w e w c c c c c c c c c c c c e} NewLayout1 {{e} {c} {c} {w} {c} {w} {c} {w} {w} {e}  {w} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {w}} ly.glistWin2 {e c c w c w c w w e w c c c c c c c c c c c c w} NewLayout2 {{e} {c} {c} {w} {c} {w} {c} {w} {w} {e}  {w} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {w}} NewLayout3 {{e} {c} {c} {w} {c} {w} {c} {w} {w} {e}  {w} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {w}} Full {{e} {c} {c} {w} {c} {w} {c} {w} {w} {e}  {w} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {w}} RatingDate {{e} {c} {c} {w} {c} {w} {c} {w} {w} {e}  {w} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {w}}}
+array set ::glist_Sort {DateEvent {7 - 8 - 9 -} ly.glistWin1 {1 + 3 +} NewLayout1 {0 +} ly.glistWin2 {0 +} NewLayout2 {0 +} NewLayout3 {0 +} Full {0 +} RatingDate { {22} {-} {7} {-} }}
+array set ::glist_FindBar {DateEvent 0 ly.glistWin1 0 NewLayout1 0 ly.glistWin2 0 NewLayout2 0 NewLayout3 0 Full 0 RatingDate 0}

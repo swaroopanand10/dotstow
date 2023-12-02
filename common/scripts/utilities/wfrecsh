@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "brave|firefox" | rofi -dmenu -i -sep "|" -p "select" | xargs -I "{}" exec "{}"
+

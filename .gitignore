@@ -1,0 +1,7 @@
+media/.config/mpd/pid
+media/.config/mpd/state
+zsh/.config/zsh/.zcompdump
+terminals/.config/tmux/.tmux/resurrect/save
+terminals/.config/tmux/.tmux/resurrect/restore
+terminals/.config/tmux/.tmux/resurrect/pane_contents.tar.gz
+common/.config/cgdb/logs

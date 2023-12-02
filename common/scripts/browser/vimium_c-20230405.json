@@ -1,0 +1,63 @@
+{
+	"name": "Vimium C",
+	"@time": "4/5/2023, 9:30:32 PM",
+	"time": 1680710432618,
+	"environment": {
+		"extension": "1.99.97",
+		"platform": "linux",
+		"chromium": 111
+	},
+	"exclusionRules": [
+		{
+			"passKeys": "/ d f g j k l r s x z ",
+			"pattern": ":https://www.youtube.com/"
+		},
+		{
+			"passKeys": "d f g s x z ",
+			"pattern": ":https://www.udemy.com/"
+		},
+		{
+			"passKeys": "d f g s x z ",
+			"pattern": ":https://www.linkedin.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://lms.iiitkottayam.ac.in/"
+		},
+		{
+			"passKeys": "f x ",
+			"pattern": ":https://0123movie.watch/"
+		},
+		{
+			"passKeys": "d s x z ",
+			"pattern": ":https://sflix.pro/"
+		},
+		{
+			"passKeys": "d f g r s x z ",
+			"pattern": ":https://vidstream.pro/"
+		},
+		{
+			"passKeys": "d g s x z ",
+			"pattern": ":https://codeforces.com/"
+		},
+		{
+			"passKeys": "d f g s x z ",
+			"pattern": ":https://www.twitch.tv/"
+		},
+		{
+			"passKeys": "f ",
+			"pattern": ":https://lichess.org/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://rapid-cloud.co/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://zoro.to/"
+		}
+	],
+	"keyupTime": 50,
+	"scrollStepSize": 150,
+	"vimSync": true
+}
