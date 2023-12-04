@@ -6,7 +6,8 @@ export XDG_SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
 export FZF_DEFAULT_COMMAND="find -L"
 # export FZF_DEFAULT_COMMAND='find .'
 
-PATH=${PATH}:$(find $HOME/scripts/ -type d -printf ":%p")
+# PATH=${PATH}:$(find $HOME/scripts/ -type d -printf ":%p")
+PATH="$PATH:$HOME/scripts/tmux-r/"
 PATH="/usr/bin/:$PATH"
 
 # setting up the editor
