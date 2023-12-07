@@ -13,6 +13,7 @@ if sudo pacman -Qs paru > /dev/null ; then
 else
     echo "paru is not installed. Will be installed now!"
     _installPackagesPacman "base-devel"
+    _installPackagesPacman "git"
     SCRIPT=$(realpath "$0")
     temp_path=$(dirname "$SCRIPT")
     echo $temp_path

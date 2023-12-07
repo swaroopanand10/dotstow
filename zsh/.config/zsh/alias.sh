@@ -37,6 +37,7 @@ alias wp='warp-cli'
 alias ggcc='gcc `pkg-config --cflags gtk4` $1 `pkg-config --libs gtk4`'
 alias bs='bash'
 alias cx='chmod +x'
+alias hn='hostname'
 # alias play='mpv --audio-file=<(yt-dlp '$0' -o -) <(yt-dlp '$0' -o -)'
 
 ## Emacs
@@ -78,17 +79,24 @@ alias gl='git log'
 alias gd='git diff'
 
 # Networking
-alias hta='nmcli device wifi hotspot ssid "swarooplatpot" password anand2002'
-alias ht='nmcli con up Hotspot'
+alias hta='nmcli device wifi hotspot ssid "swarooplatpot" password anand2002' # start hotspot with these config(will resave config)
+alias ht='nmcli con up Hotspot' # for turning on hotspot with already saved hotspot config
 alias ncu='nmcli con up' # this is for connecting to already saved connection(provide connection after it)
-alias htn='nmcli device wifi hotspot'
+alias htn='nmcli device wifi hotspot' # give credientials after this to start hotspot with those
 alias wfl='nmcli device wifi list'
 alias wfs='nmcli device wifi rescan'
 alias wfc='nmcli device wifi connect'
-alias ndc='nmcli device connect'
-alias ndd='nmcli device disconnect'
-alias nno='nmcli networking on'
-alias nnf='nmcli networking off'
-alias nwo='nmcli radio wifi on'
-alias nwf='nmcli radio wifi off'
-alias ncs='nmcli connection show'
+alias ndc='nmcli device connect' # connect to any device
+alias ndd='nmcli device disconnect' # disconnect go connected device 
+alias nno='nmcli networking on' # enabling networking
+alias nnf='nmcli networking off' # disabling networking
+alias nwo='nmcli radio wifi on' # enabling wifi
+alias nwf='nmcli radio wifi off' # disabling wifi
+alias ncs='nmcli connection show' # show current connection info
+
+## distrobox
+alias dsa='distrobox create -i quay.io/toolbx-images/archlinux-toolbox:latest -n'
+# alias dsa='distrobox create -i docker.io/library/archlinux:latest -n'
+alias dse='distrobox-enter'
+alias dsl='distrobox list'
+alias dss='distrobox stop'

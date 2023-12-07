@@ -278,3 +278,12 @@ paru -S stow
 
 # for waybar capslock indication to work, add your user to input group
 gpasswd -a swaroop input
+
+### virtualization using qemu and virt manager
+paru -S qemu-full libvirt virt-manager ebtables
+sudo systemctl enable --now libvirtd
+sudo groupadd libvirtd
+sudo gpasswd -a swaroop libvirtd
+
+# install spice-vdagent in the vm to unlock cross clipboard and file sharing feature
+sudo pacman -S spice-vdagent
