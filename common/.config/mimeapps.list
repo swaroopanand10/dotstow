@@ -28,9 +28,11 @@ image/vnd.wap.wbmp=org.gnome.eog.desktop
 image/x-icns=org.gnome.eog.desktop
 x-scheme-handler/http=thorium-browser.desktop
 x-scheme-handler/https=thorium-browser.desktop
-text/html=org.gnome.Epiphany.desktop
+text/html=thorium-browser.desktop
 application/xhtml+xml=org.gnome.Epiphany.desktop
 x-scheme-handler/etcher=balena-etcher.desktop
+x-scheme-handler/about=thorium-browser.desktop
+x-scheme-handler/unknown=thorium-browser.desktop
 
 [Added Associations]
 image/bmp=org.gnome.eog.desktop;
