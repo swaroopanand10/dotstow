@@ -1,29 +1,60 @@
-## Setting location for zsh config files
+### Setting location for zsh config files
 export ZDOTDIR="$HOME/.config/zsh"
 export XDG_SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
 
-##fzf will also find hidden files after this
+### Fzf will also find hidden files after this
 export FZF_DEFAULT_COMMAND="find -L"
 # export FZF_DEFAULT_COMMAND='find .'
 
-# PATH=${PATH}:$(find $HOME/scripts/ -type d -printf ":%p")
-PATH="$PATH:$HOME/scripts/tmux-r/"
-PATH="/usr/bin/:$PATH"
-
-# setting up the editor
+### Editor setting
 export VISUAL=nvim
-export EDITOR="$VISUAL"
+export EDITOR=$VISUAL
 
-# cgdb config dir
-export CGDB_DIR="$HOME/.config/cgdb"
+### Cgdb config dir
+export CGDB_DIR=$HOME/.config/cgdb
+
+### Other Stuff
+export LC_ALL=en_US.UTF-8
+XDG_CURRENT_DESKTOP=Hyprland
+XDG_SESSION_TYPE=wayland
+XDG_SESSION_DESKTOP=Hyprland
+
+#### GIMP related stuff start #######################################
+export GIMP_PREFIX="${HOME}/gimp"
+
+# Used to find programs/tools during build
+# export PATH=$PATH:${GIMP_PREFIX}/bin
+
+# Used to detect the build dependencies
+export PKG_CONFIG_PATH="${GIMP_PREFIX}/share/pkgconfig:${GIMP_PREFIX}/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}"
+# Assuming a 64-bit build. Remove otherwise.
+export PKG_CONFIG_PATH="${GIMP_PREFIX}/lib64/pkgconfig:$PKG_CONFIG_PATH"
+
+# Used to find the glib-introspection dependencies
+export XDG_DATA_DIRS="${XDG_DATA_DIRS:+$XDG_DATA_DIRS:}${GIMP_PREFIX}/share:/usr/local/share:/usr/share"
+
+# Used to find the libraries at runtime
+export LD_LIBRARY_PATH="${GIMP_PREFIX}/lib:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+
+# Used by Autotools to find its tools
+export ACLOCAL_FLAGS="-I $INSTALL_PREFIX/share/aclocal $ACLOCAL_FLAGS"
+################################ GIMP END ##########################################
+
+
+#### PATH VARIABLE SETUP #################################################
+PATH=/usr/bin/:$PATH
+
+# PATH=${PATH}:$(find $HOME/scripts/ -type d -printf ":%p")
+PATH=$PATH:$HOME/scripts/tmux-r/
 
 # path variable for go
 export PATH=$PATH:/usr/local/go/bin
 
 # path variable for cargo
-export PATH="/home/swaroop/.cargo/bin:$PATH"
+export PATH=$PATH:$HOME/.cargo/bin
+############################# PATH END #########################
 
-# lf icons
+#### lf icons
 export LF_ICONS="\
 tw=:\
 st=:\
@@ -186,35 +217,3 @@ ex=:\
 *.pdf=:\
 *.nix=:\
 "
-
-export LC_ALL=en_US.UTF-8
-
-### gimp related stuff
-export GIMP_PREFIX="${HOME}/gimp"
-
-# Used to find programs/tools during build
-export PATH="${GIMP_PREFIX}/bin:$PATH"
-
-# Used to detect the build dependencies
-export PKG_CONFIG_PATH="${GIMP_PREFIX}/share/pkgconfig:${GIMP_PREFIX}/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}"
-# Assuming a 64-bit build. Remove otherwise.
-export PKG_CONFIG_PATH="${GIMP_PREFIX}/lib64/pkgconfig:$PKG_CONFIG_PATH"
-
-# Used to find the glib-introspection dependencies
-export XDG_DATA_DIRS="${XDG_DATA_DIRS:+$XDG_DATA_DIRS:}${GIMP_PREFIX}/share:/usr/local/share:/usr/share"
-
-# Used to find the libraries at runtime
-export LD_LIBRARY_PATH="${GIMP_PREFIX}/lib:${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-
-# Used by Autotools to find its tools
-export ACLOCAL_FLAGS="-I $INSTALL_PREFIX/share/aclocal $ACLOCAL_FLAGS"
-
-XDG_CURRENT_DESKTOP=Hyprland
-XDG_SESSION_TYPE=wayland
-XDG_SESSION_DESKTOP=Hyprland
-
-# if [[ "$(tty)" = "/dev/tty3" ]]; then
-#  # pgrep bspwm || startx "$XDG_CONFIG_HOME/X11/xinitrc"
-#  startx
-#  # $HOME/scripts/hyprstart1.sh	# this means when do login at tty then auto start the hyprland by running this script
-# fi
