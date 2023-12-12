@@ -43,3 +43,4 @@ bindkey -M vicmd 'y' vi-yank-xclip
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
+bindkey -M vicmd '^e' edit-command-line # this is for enabling c-e in vi mode as well
