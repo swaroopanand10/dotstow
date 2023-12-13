@@ -5,6 +5,7 @@ api.mapkey('<ctrl-y>', 'Show me the money', function() {
 
 // an example to replace `T` with `gt`, click `Default mappings` to see how `T` works.
 api.map('gt', 'T');
+api.map('S', 'T'); // for easyness
 api.map('<Ctrl-z>', '<Esc>');
 
 // an example to remove mapkey `Ctrl-i`
@@ -14,6 +15,8 @@ api.unmap('R');
 api.unmap('E');
 api.unmap('e');
 api.unmap('H');
+// api.unmap('S');
+api.unmap('D');
 
 api.cmap('<Ctrl-j>', '<Tab>');
 api.cmap('<Ctrl-k>', '<Shift-Tab>');

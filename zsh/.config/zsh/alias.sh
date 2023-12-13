@@ -55,7 +55,7 @@ alias v='nvim'
 alias dv='NVIM_APPNAME=nvim-def nvim'
 alias lv='NVIM_APPNAME=lazyvim nvim'
 alias nv='NVIM_APPNAME=nvchad nvim'
-alias kv='NVIM_APPNAME=lazylatest $HOME/neovim/bin/nvim'
+alias kv='$HOME/neovim/bin/nvim'
 
 ## Stow
 alias ste='cd ~/dotstow/ && stow */ -t ~'

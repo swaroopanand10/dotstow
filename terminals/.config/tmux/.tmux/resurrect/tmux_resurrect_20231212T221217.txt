@@ -1,0 +1,49 @@
+pane	asm	1	1	:*	1	swaroop@archlinux:~/code/projects/asm	:/home/swaroop/code/projects/asm	1	zsh	:
+pane	bsh	1	1	:*	1	swaroop@archlinux:~/code/prg/bash	:/home/swaroop/code/prg/bash	1	zsh	:
+pane	bsh	2	0	:-	1	swaroop@archlinux:~	:/home/swaroop	1	zsh	:
+pane	c	1	0	:-	1	swaroop@archlinux:~/code/prg/c	:/home/swaroop/code/prg/c/library	1	nvim	:nvim
+pane	c	2	1	:*	1	swaroop@archlinux:~/code/prg/c	:/home/swaroop/code/prg/c/library	1	nvim	:zsh
+pane	calendar	1	1	:*	1	swaroop@archlinux:~	:/home/swaroop	1	zsh	:
+pane	calendar	2	0	:-	1	swaroop@archlinux:~	:/home/swaroop	1	zsh	:
+pane	con	1	1	:*	1	swaroop@archlinux:~/dotstow	:/home/swaroop/dotstow	1	nvim	:nvim
+pane	con	2	0	:	1	swaroop@archlinux:~/.config/nvim	:/home/swaroop/.config/nvim	1	zsh	:
+pane	con	3	0	:-	1	swaroop@archlinux:~/.config/autoinstall	:/home/swaroop/.config/autoinstall	1	zsh	:
+pane	cpp	1	1	:*	1	swaroop@archlinux:~	:/home/swaroop/code/prg/cpp	1	nvim	:nvim
+pane	cpp	2	0	:-	1	swaroop@archlinux:~	:/home/swaroop/code/prg/cpp	1	zsh	:zsh
+pane	gtk4tut	1	1	:*	1	swaroop@archlinux:~/code/projects/gtk4tut	:/home/swaroop/code/projects/gtk4tut	1	zsh	:
+pane	hfc_restart	1	1	:*	1	archlinux	:/home/swaroop/code/projects/hfc_restart	1	zsh	:
+pane	inkscape	1	1	:*	1	swaroop@archlinux:~/code/os/inkscape	:/home/swaroop/code/os/inkscape	1	zsh	:zsh
+pane	inkscape	2	0	:-	1	swaroop@archlinux:~	:/home/swaroop	1	zsh	:
+pane	js	1	1	:*	1	archlinux	:/home/swaroop/code/prg/js	1	nvim	:nvim
+pane	neorg	1	1	:*	1	swaroop@archlinux:~/code/prg/neorg	:/home/swaroop/code/prg/neorg	1	zsh	:
+pane	neorg	2	0	:-	1	swaroop@archlinux:~/notes	:/home/swaroop/notes	1	zsh	:
+pane	py	1	1	:*	1	archlinux	:/home/swaroop/code/prg/py	1	nvim	:nvim
+pane	rs	1	1	:*	1	archlinux	:/home/swaroop/code/prg/rs/sample	1	nvim	:nvim .
+pane	rs	2	0	:-	1	archlinux	:/home/swaroop/code/prg/rs	1	zsh	:
+pane	web	1	1	:*	1	swaroop@archlinux:~/code/prg/web	:/home/swaroop/code/prg/web	1	zsh	:
+pane	web	2	0	:-	1	archlinux	:/home/swaroop/code/prg/web	1	zsh	:
+window	asm	1	:zsh	1	:*	cbbe,112x29,0,0,1	:
+window	bsh	1	:zsh	1	:*	b7bf,135x33,0,0,2	:
+window	bsh	2	:zsh	0	:-	c5c0,192x46,0,0,3	:
+window	c	1	:c	0	:-	bfc1,135x35,0,0,4	off
+window	c	2	:nvim	1	:*	bfc2,135x35,0,0,5	:
+window	calendar	1	:zsh	1	:*	b7c3,135x33,0,0,6	:
+window	calendar	2	:zsh	0	:-	b524,95x24,0,0,7	:
+window	con	1	:df	1	:*	bfc5,135x35,0,0,8	off
+window	con	2	:nc	0	:	c4c6,137x36,0,0,9	off
+window	con	3	:ic	0	:-	571f,87x22,0,0,10	off
+window	cpp	1	:cpp	1	:*	6013,135x35,0,0,14	off
+window	cpp	2	:zsh	0	:-	6614,112x29,0,0,15	:
+window	gtk4tut	1	:zsh	1	:*	6015,135x35,0,0,16	:
+window	hfc_restart	1	:zsh	1	:*	58b6,128x31,0,0,17	:
+window	inkscape	1	:zsh	1	:*	6017,135x35,0,0,18	:
+window	inkscape	2	:zsh	0	:-	56e8,86x22,0,0,19	:
+window	js	1	:nvim	1	:*	d1df,82x20,0,0,20	:
+window	neorg	1	:zsh	1	:*	dc10,135x33,0,0,21	:
+window	neorg	2	:zsh	0	:-	d631,126x30,0,0,22	:
+window	py	1	:nvim	1	:*	d8b2,128x31,0,0,23	:
+window	rs	1	:nvim	1	:*	e293,137x36,0,0,24	:
+window	rs	2	:zsh	0	:-	e294,137x36,0,0,25	:
+window	web	1	:zsh	1	:*	e015,135x35,0,0,26	:
+window	web	2	:zsh	0	:-	deb6,105x25,0,0,27	:
+state	con	cpp
