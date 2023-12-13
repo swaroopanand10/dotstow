@@ -42,10 +42,10 @@ if [ "$volume" = "0" ]; then
         fi
     fi
 fi
-bar=$(seq -s " " $(($volume/8)) | sed 's/[0-9]//g')
+bar=$(seq -s " " $(($volume)) | sed 's/[0-9]//g')
 # Send the notification
 # $DIR/notify-send.sh "$volume""     ""$bar" -i "$icon_name" -t 2000 -h int:value:"$volume" -h string:synchronous:"$bar" --replace=555
-$DIR/notify-send.sh "$volume""$bar" -i "$icon_name" -t 2000 -h int:value:"$volume" -h string:synchronous:"$bar" --replace=555
+$DIR/notify-send.sh "$volume" "$bar" -i "$icon_name" -t 2000 -h int:value:"$volume" -h string:synchronous:"$bar" --replace=555
 
 }
 

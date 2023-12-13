@@ -101,7 +101,7 @@
 63). xdo = pacman -S xdo
 64). flake8 = pacman -S flake8
 65). python-black = paru python-black
-66). nemo = pacman -S nemo (set the default terminal by - gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty)
+66). nemo = pacman -S nemo (set the default terminal by - gsettings set org.cinnamon.desktop.default-applications.terminal exec kitty)
 67). qalc = pacman -S qalc
 68). vimv = paru -S vimv  (a tool for bulk renaming, other options are vidir, edir etc)
 69). cloudflare-warp- paru -S cloudflare-warp-bin
