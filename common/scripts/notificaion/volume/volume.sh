@@ -56,8 +56,12 @@ up)
 	pamixer -u
 	# Up the volume (+ 5%)
 	# amixer -D pulse sset Master 10%+ > /dev/null
-	pamixer -i 5
-	send_notification
+	volume=$(get_volume)
+
+	if [ "$volume" -lt "65" ]; then
+    pamixer -i 5
+    send_notification
+  fi
 	;;
 down)
 	# amixer -D pulse set Master on > /dev/null
