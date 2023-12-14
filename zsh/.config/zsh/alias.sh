@@ -31,10 +31,11 @@ alias lfu='~/.config/lf/ub-lfub.sh'
 
 ## Others
 alias ncm='ncmpcpp'
-alias grep='grep --color'
+alias cgrp='grep --color=always -i -n'
+alias rgrp='grep --color=always -i -n -r -I'
+alias crg='rg --color=always -n --column -S --no-heading'
 alias nb='newsboat'
 alias wp='warp-cli'
-alias ggcc='gcc `pkg-config --cflags gtk4` $1 `pkg-config --libs gtk4`'
 alias bs='bash'
 alias cx='chmod +x'
 alias hn='hostname'
@@ -99,3 +100,13 @@ alias dsa='distrobox create -i quay.io/toolbx-images/archlinux-toolbox:latest -n
 alias dse='distrobox-enter'
 alias dsl='distrobox list'
 alias dss='distrobox stop'
+
+## GCC compiler flag aliases
+# for c++
+alias cps="g++ -ggdb -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion"
+alias cpvs="g++ -ggdb -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -Werror"
+# for c
+alias cs="gcc -ggdb -pedantic-errors -Wall -Wextra -Wconversion -Wsign-conversion"
+alias cvs="gcc -ggdb -pedantic-errors -Wall -Wextra -Wconversion -Wsign-conversion -Werror"
+# for gtk4
+alias ggcc='gcc `pkg-config --cflags gtk4` $1 `pkg-config --libs gtk4`'

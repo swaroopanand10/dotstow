@@ -36,3 +36,4 @@ par(){
 
 source ~/.config/zsh/find-based-functions.sh
 source ~/.config/zsh/fd-based-functions.sh
+source ~/.config/zsh/grep-rg-based-functions.sh

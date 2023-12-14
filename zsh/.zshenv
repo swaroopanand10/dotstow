@@ -2,9 +2,9 @@
 export ZDOTDIR="$HOME/.config/zsh"
 export XDG_SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
 
-### Fzf will also find hidden files after this
-export FZF_DEFAULT_COMMAND="find -L"
-# export FZF_DEFAULT_COMMAND='find .'
+### FZF related
+export FZF_DEFAULT_COMMAND="find -L" # Fzf will also find hidden files after this
+export FZF_DEFAULT_OPTS=" --bind ctrl-u:preview-up,ctrl-d:preview-down,?:toggle-preview,ctrl-w:toggle-preview-wrap"
 
 ### Editor setting
 export VISUAL=nvim
