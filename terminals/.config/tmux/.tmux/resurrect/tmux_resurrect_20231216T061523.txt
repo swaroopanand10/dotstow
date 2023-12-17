@@ -1,0 +1,55 @@
+pane	asm	1	1	:*	1	swaroop@archlinux:~/code/projects/asm	:/home/swaroop/code/projects/asm	1	zsh	:
+pane	bsh	1	1	:*	1	swaroop@archlinux:~/code/prg/bash	:/home/swaroop/code/prg/bash	1	zsh	:
+pane	bsh	2	0	:	1	swaroop@archlinux:~	:/home/swaroop	1	zsh	:
+pane	c	1	1	:*	1	swaroop@archlinux:~/code/prg/c	:/home/swaroop/code/prg/c/library	1	nvim	:nvim
+pane	c	2	0	:	1	swaroop@archlinux:~/code/prg/c	:/home/swaroop/code/prg/c/library	1	zsh	:zsh
+pane	calendar	1	1	:*	1	swaroop@archlinux:~	:/home/swaroop	1	zsh	:
+pane	calendar	2	0	:	1	swaroop@archlinux:~	:/home/swaroop	1	zsh	:
+pane	cf	1	1	:*	1	archlinux	:/home/swaroop/code/cf	1	nvim	:nvim
+pane	con	1	1	:*	1	swaroop@archlinux:~/dotstow	:/home/swaroop/dotstow	1	zsh	:zsh
+pane	con	2	0	:	1	swaroop@archlinux:~/.config/nvim	:/home/swaroop/.config/nvim	1	nvim	:nvim
+pane	con	3	0	:	1	swaroop@archlinux:~/.config/autoinstall	:/home/swaroop/.config/autoinstall	1	nvim	:nvim postinstall.sh
+pane	con	4	0	:-	1	archlinux	:/home/swaroop	1	zsh	:
+pane	cpp	1	1	:*	1	swaroop@archlinux:~	:/home/swaroop/code/prg/cpp	1	nvim	:nvim
+pane	cpp	2	0	:	1	swaroop@archlinux:~	:/home/swaroop/code/prg/cpp	1	zsh	:zsh
+pane	gtk4tut	1	1	:*	1	swaroop@archlinux:~/code/projects/gtk4tut	:/home/swaroop/code/projects/gtk4tut	1	zsh	:
+pane	hfc_restart	1	1	:*	1	archlinux	:/home/swaroop/code/projects/hfc_restart	1	zsh	:
+pane	inkscape	1	1	:*	1	swaroop@archlinux:~/code/os/inkscape	:/home/swaroop/code/os/inkscape	1	zsh	:zsh
+pane	inkscape	2	0	:	1	swaroop@archlinux:~	:/home/swaroop	1	zsh	:
+pane	js	1	1	:*	1	archlinux	:/home/swaroop/code/prg/js	1	nvim	:nvim
+pane	learncpp	1	1	:*	1	archlinux	:/home/swaroop/code/projects/learncpp	1	zsh	:
+pane	neorg	1	1	:*	1	swaroop@archlinux:~/code/prg/neorg	:/home/swaroop/code/prg/neorg	1	zsh	:
+pane	neorg	2	0	:	1	swaroop@archlinux:~/notes	:/home/swaroop/notes	1	nvim	:nvim
+pane	py	1	1	:*	1	archlinux	:/home/swaroop/code/prg/py	1	nvim	:nvim
+pane	rs	1	1	:*	1	archlinux	:/home/swaroop/code/prg/rs/sample	1	nvim	:nvim .
+pane	rs	2	0	:	1	archlinux	:/home/swaroop/code/prg/rs	1	zsh	:
+pane	web	1	1	:*	1	swaroop@archlinux:~/code/prg/web	:/home/swaroop/code/prg/web	1	zsh	:
+pane	web	2	0	:	1	archlinux	:/home/swaroop/code/prg/web	1	zsh	:
+window	asm	1	:zsh	1	:*	b7be,135x33,0,0,1	:
+window	bsh	1	:zsh	1	:*	b7bf,135x33,0,0,2	:
+window	bsh	2	:zsh	0	:	b7c0,135x33,0,0,3	:
+window	c	1	:c	1	:*	bfc1,135x35,0,0,4	off
+window	c	2	:zsh	0	:	bfc2,135x35,0,0,5	:
+window	calendar	1	:zsh	1	:*	b7c3,135x33,0,0,6	:
+window	calendar	2	:zsh	0	:	b7c4,135x33,0,0,7	:
+window	cf	1	:nvim	1	:*	bfc5,135x35,0,0,8	:
+window	con	1	:df	1	:*	c726,76x19,0,0,9	off
+window	con	2	:nc	0	:	63bf,76x19,0,0,10	off
+window	con	3	:ic	0	:	63c0,76x19,0,0,11	off
+window	con	4	:zsh	0	:-	e3c5,76x19,0,0,26	:
+window	cpp	1	:cpp	1	:*	5721,87x22,0,0,12	off
+window	cpp	2	:zsh	0	:	5c12,135x33,0,0,13	:
+window	gtk4tut	1	:zsh	1	:*	5c13,135x33,0,0,14	:
+window	hfc_restart	1	:zsh	1	:*	5c14,135x33,0,0,15	:
+window	inkscape	1	:zsh	1	:*	5c15,135x33,0,0,16	:
+window	inkscape	2	:zsh	0	:	5c16,135x33,0,0,17	:
+window	js	1	:nvim	1	:*	5c17,135x33,0,0,18	:
+window	learncpp	1	:zsh	1	:*	5722,87x22,0,0,32	:
+window	neorg	1	:zsh	1	:*	5c18,135x33,0,0,19	:
+window	neorg	2	:nvim	0	:	dc0f,135x33,0,0,20	:
+window	py	1	:nvim	1	:*	dc10,135x33,0,0,21	:
+window	rs	1	:nvim	1	:*	dc11,135x33,0,0,22	:
+window	rs	2	:zsh	0	:	dc12,135x33,0,0,23	:
+window	web	1	:zsh	1	:*	e013,135x35,0,0,24	:
+window	web	2	:zsh	0	:	dc14,135x33,0,0,25	:
+state	learncpp	cpp

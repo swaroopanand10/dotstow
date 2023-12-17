@@ -79,7 +79,13 @@ alias gs='git status'
 alias gl='git log'
 alias gd='git diff'
 
-# Networking
+## Vivaldi preferences saving
+alias vbk='cp $HOME/.config/vivaldi/Default/Preferences $HOME/.config/browser/vivaldi/preferences/Prefernces_$(date +"%Y-%m-%d_%H:%M:%S")'
+alias vcp='mkdir -p ~/.config/vivaldi/Default/ && touch ~/.config/vivaldi/Default/Preferences'
+alias vrs='cat ${1} > $HOME/.config/vivaldi/Default/Preferences'
+alias V_reset='rm -rf .config/vivaldi .cache/vivaldi'
+
+## Networking
 alias hta='nmcli device wifi hotspot ssid "swarooplatpot" password anand2002' # start hotspot with these config(will resave config)
 alias ht='nmcli con up Hotspot' # for turning on hotspot with already saved hotspot config
 alias ncu='nmcli con up' # this is for connecting to already saved connection(provide connection after it)
