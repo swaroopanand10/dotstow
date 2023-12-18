@@ -1,4 +1,5 @@
-fgr(){
+# This also searches in hidden files but uses grep
+fgr(){ 
   local text
   text=$(grep --color=always --line-number -i -I --recursive ${1} ${2:-.} | fzf --ansi --layout=reverse +m --delimiter : --preview-window +{2}-/2:cycle --preview 'bat --theme="Dracula" --style=numbers --color=always --highlight-line {2} {1}') && echo $text
 }

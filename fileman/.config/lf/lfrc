@@ -69,6 +69,7 @@ cmd open ${{
 }}
 
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
+cmd touch $touch "$(echo $*)"
 
 cmd extract ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
@@ -92,7 +93,8 @@ cmd moveto ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
 	clear; echo "Move to where?"
-	dest="$(sed -e 's/\s*#.*//' -e '/^$/d' -e 's/^\S*\s*//' ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf | sed 's|~|$HOME|')" &&
+	# dest="$(sed -e 's/\s*#.*//' -e '/^$/d' -e 's/^\S*\s*//' ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf | sed 's|~|$HOME|')" &&
+	dest="$(fd . ${1:-$HOME} -t d -u 2> /dev/null | fzf --layout=reverse +m --preview 'tree -C {} | head -200')" &&
 	for x in $fx; do
 		eval mv -iv \"$x\" \"$dest\"
 	done &&
@@ -103,19 +105,19 @@ cmd copyto ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
 	clear; echo "Copy to where?"
-	dest="$(sed -e 's/\s*#.*//' -e '/^$/d' -e 's/^\S*\s*//' ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf | sed 's|~|$HOME|')" &&
+	# dest="$(sed -e 's/\s*#.*//' -e '/^$/d' -e 's/^\S*\s*//' ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf | sed 's|~|$HOME|')" &&
+	dest="$(fd . ${1:-$HOME} -t d -u 2> /dev/null | fzf --layout=reverse +m --preview 'tree -C {} | head -200')" &&
 	for x in $fx; do
 		eval cp -ivr \"$x\" \"$dest\"
 	done &&
 	notify-send "📋 File(s) copied." "File(s) copies to $dest."
 }}
 
-
-cmd bulk-rename ${{ # not working for selections
+cmd bulkrename ${{ # copied from lf wiki
     old="$(mktemp)"
     new="$(mktemp)"
     if [ -n "$fs" ]; then
-        fs="$(basename $fs)"
+        fs="$(basename -a $fs)"
     else
         fs="$(ls)"
     fi
@@ -140,6 +142,35 @@ cmd bulk-rename2 ${{  # this seems to work
 	if [ -n "${fs}" ]; then
 		echo "$fs" > $index
 	else
+		# echo "$(ls "$(dirname $f)" | tr ' ' "\n")" > $index
+		echo "$(ls -1 -d "$PWD/"* "$(dirname $f)" | tr ' ' "\n")" > $index
+	fi
+	index_edit=$(mktemp /tmp/lf-bulk-rename.XXXXXXXXXX)
+	cat $index > $index_edit
+	$EDITOR $index_edit
+	if [ $(cat $index | wc -l) -eq $(cat $index_edit | wc -l) ]; then
+		max=$(($(cat $index | wc -l)+1))
+		counter=1
+		while [ $counter -le $max ]; do
+			a="$(cat $index | sed "${counter}q;d")"
+			b="$(cat $index_edit | sed "${counter}q;d")"
+			counter=$(($counter+1))
+			
+			[ "$a" = "$b" ] && continue
+			[ -e "$b" ] && echo "File exists: $b" && continue
+			mv "$a" "$b"
+		done
+	else
+		echo "Number of lines must stay the same"
+	fi
+	rm $index $index_edit
+}}
+
+cmd bulk-rename ${{  # this seems to work
+	index=$(mktemp /tmp/lf-bulk-rename-index.XXXXXXXXXX)
+	if [ -n "${fs}" ]; then
+		echo "$(echo -e "$fx" | awk -F '/' '{print $NF}')" > $index
+	else
 		echo "$(ls "$(dirname $f)" | tr ' ' "\n")" > $index
 	fi
 	index_edit=$(mktemp /tmp/lf-bulk-rename.XXXXXXXXXX)
@@ -163,7 +194,6 @@ cmd bulk-rename2 ${{  # this seems to work
 	rm $index $index_edit
 }}
 
-
 # cmd setbg "$1"
 cmd bck ${{ # this seems to be working
     swaybg -i "$f" &
@@ -179,8 +209,23 @@ cmd bckp ${{
     pkill -SIGUSR1 '^waybar$';
   }}
 
-# cmd bulkrename $vidir  # not working because vidir is not installed
-cmd bulkrename $vimv $fx
+## Lsd to display about file at bottom
+cmd on-select &{{
+    lf -remote "send $id set statfmt \"$(lsd -ld --color=always "$f")\""
+}}
+
+## Toggle preview
+cmd toggle_preview %{{
+    if [ "$lf_preview" = "true" ]; then
+        lf -remote "send $id :set preview false; set ratios 1:5"
+    else
+        lf -remote "send $id :set preview true; set ratios 1:2:3"
+    fi
+}}
+
+# cmd bulkdirrename $vidir
+cmd bulk_delete $vimv $(ls -1 -d "$PWD/"* "$(dirname $f)" | tr ' ' "\n")
+cmd bulk_delete_selelected $vimv $fx
 
 # Bindings
 # map <c-f> $lf -remote "send $id select \"$(find ${1:-~} 2> /dev/null | fzf --layout=reverse +m)\""
@@ -191,6 +236,7 @@ map gZ $lf -remote "send $id select \"$(fd . -u -td 2> /dev/null | fzf --layout=
 map gd $lf -remote "send $id select \"$(fd . ${1:-$HOME} -td 2> /dev/null | fzf --layout=reverse +m --preview 'tree -C {} | head -200')\""
 map gD $lf -remote "send $id select \"$(fd . ${1:-$HOME} -u -td 2> /dev/null | fzf --layout=reverse +m --preview 'tree -C {} | head -200')\""
 map J $lf -remote "send $id cd $(sed -e 's/\s*#.*//' -e '/^$/d' -e 's/^\S*\s*//' ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf)"
+map zp toggle_preview
 # map g top
 map gg top
 map D delete
@@ -198,6 +244,7 @@ map E extract
 map C copyto
 map M moveto
 map <c-n> push :mkdir<space>
+map <c-t> push :touch<space>
 map <c-r> reload
 # map <c-s> set hidden!
 map . set hidden!
@@ -209,17 +256,21 @@ map <enter> shell
 map o &mimeopen $f
 map O $mimeopen --ask $f
 
-map A rename # at the very end
-map c push A<c-u> # new rename
-map I push A<c-a> # at the very beginning
-map i push A<a-b><a-b><a-f> # before extension
-map a push A<a-b> # after extension
-# map b bulkrename
-map bg bulk-rename2 # this seems to work for now
+map c push i<c-e><c-u> # new rename
+map A push i<c-e>  # at the very end
+map I push i<c-a> # at the very beginning
+map a push i<a-f><a-b> # after extension(dot)
+map i rename # before extension
+# map i push A<a-b><a-b><a-f> # before extension(dot)
+
+# map bg bulk-rename # only file name
+map bg bulkrename # only file name ( but copied from lf wiki)
+map bG bulk-rename2 # full path
+map bd bulk_delete_selelected
+map bD bulk_delete
+
 map w bck 
 map W bckp
-# map b $setbg $f
-# map br bulk-rename 
 
 map <c-e> down
 map <c-y> up
@@ -227,10 +278,16 @@ map V push :!nvim<space>
 
 # map W $setsid -f $TERMINAL >/dev/null 2>&1
 
-map Y $printf "%s" "$fx" | xclip -selection clipboard
+map Y $printf "%s" "$fx" | wl-copy
 
 map gc cd ~/.config #started working 
 map gh cd ~/
 
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"
+
+### Some default keybindings -
+# "space" for selection, then d for cut and y for copy
+# "v" for inverting selection
+# "clear for clearing the cut and copy selection"
+# "p" for pasting
