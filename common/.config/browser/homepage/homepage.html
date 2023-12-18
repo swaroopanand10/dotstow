@@ -2,14 +2,42 @@
 <html lang="en">
 
 <head>
-  <title>homepage</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Home</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 
-<body bgcolor="#000000">
-  <h1> blank homepage </h1>
+<body>
+  <div class="container">
+    <div id="clock"></div>
+  </div>
+
+  <script>
+    // Get current time and format
+    getTime = () => {
+      let date = new Date(),
+        min = date.getMinutes(),
+        sec = date.getSeconds(),
+        hour = date.getHours();
+
+      return "" +
+        (hour < 10 ? ("0" + hour) : hour) + ":" +
+        (min < 10 ? ("0" + min) : min) + ":" +
+        (sec < 10 ? ("0" + sec) : sec);
+    }
+
+    window.onload = () => {
+      // Set up the clock
+      document.getElementById("clock").innerHTML = getTime();
+      // Set clock interval to tick clock
+      setInterval(() => {
+        document.getElementById("clock").innerHTML = getTime();
+      }, 100);
+    }
+  </script>
 </body>
 
 </html>
