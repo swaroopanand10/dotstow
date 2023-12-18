@@ -1,1 +1,1 @@
-swaybg -c "#000000"
+killall swaybg ; swaybg -c "#000000"
