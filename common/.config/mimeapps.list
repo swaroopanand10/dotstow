@@ -26,13 +26,13 @@ image/svg+xml=org.gnome.eog.desktop
 image/svg+xml-compressed=org.gnome.eog.desktop
 image/vnd.wap.wbmp=org.gnome.eog.desktop
 image/x-icns=org.gnome.eog.desktop
-x-scheme-handler/http=vivaldi-stable.desktop
-x-scheme-handler/https=vivaldi-stable.desktop
-text/html=vivaldi-stable.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+text/html=google-chrome.desktop
 application/xhtml+xml=org.gnome.Epiphany.desktop
 x-scheme-handler/etcher=balena-etcher.desktop
-x-scheme-handler/about=vivaldi-stable.desktop
-x-scheme-handler/unknown=vivaldi-stable.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
 
 [Added Associations]
 image/bmp=org.gnome.eog.desktop;
