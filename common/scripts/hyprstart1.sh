@@ -1,9 +1,8 @@
 #!/bin/sh
 
-
 # /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-#starting mpd
+# Starting mpd
 [ ! -s ~/.config/mpd/pid ] && mpd
 mpd >/dev/null 2>&1 &
 
@@ -16,7 +15,6 @@ export HYPRLAND_LOG_WLR=1
 
 # Tell XWayland to use a cursor theme
 export XCURSOR_THEME=Bibata-Modern-Classic
-
 # Set a cursor size
 export XCURSOR_SIZE=24
 
@@ -26,5 +24,8 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export SDL_IM_MODULE=fcitx
 export GLFW_IM_MODULE=ibus
+
+# Setting Qt theme configuration
+export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # exec Hyprland
