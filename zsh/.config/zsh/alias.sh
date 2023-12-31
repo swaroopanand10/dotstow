@@ -62,13 +62,16 @@ alias kv='$HOME/neovim/bin/nvim'
 ## Stow
 alias ste='cd ~/dotstow/ && stow */ -t ~'
 alias sta='cd ~/dotstow/ && stow */ -t ~ --adopt'
-alias st='cd ~/dotstow/ && stow -t ~'
+alias st='cd ~/dotstow/ && stow * -t ~'
 
 ## Package searching
 alias pke='paru -Q | fzf'  # searching all packages
 alias pki='paru -Qe | fzf' # searching installed package
 alias pkn='paru -Qn | fzf' # searching only normal package
 alias pkr='paru -Qm | fzf' # searching only aur package
+alias refc='sudo reflector --country "India,United States," --latest 100 --age 12 --fastest 8 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias mirrbak='sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist_$(date +"%Y-%m-%d_%H:%M:%S")'
+alias ref='sudo reflector --latest 100 --fastest 8 --protocol https --age 12 --sort rate --save /etc/pacman.d/mirrorlist'
 
 ## Git
 alias gcl='git clone'
