@@ -74,7 +74,7 @@ down)
 mute)
 	# Toggle mute
   pamixer -t
-  pamixer --set-volume 10
+  pamixer --set-volume 0
 	bool_mute=$(is_mute)
 	if [ $bool_mute = "true" ]; then
 		DIR=$(dirname "$0")
