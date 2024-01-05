@@ -5,8 +5,10 @@ api.mapkey('<ctrl-y>', 'Show me the money', function() {
 
 // an example to replace `T` with `gt`, click `Default mappings` to see how `T` works.
 api.map('gt', 'T');
-api.map('S', 'T'); // for easyness
-api.map('<Ctrl-z>', '<Esc>');
+// api.map('S', 'T'); // for easyness
+api.map('<Alt-e>', 'T'); // for easyness
+// api.map('<Ctrl-z>', '<Esc>');
+api.map('<Ctrl-x>', '<Esc>');
 
 // an example to remove mapkey `Ctrl-i`
 // api.unmap('<ctrl-i>');
@@ -21,9 +23,11 @@ api.unmap('D');
 api.cmap('<Ctrl-j>', '<Tab>');
 api.cmap('<Ctrl-k>', '<Shift-Tab>');
 
-api.cmap('<Ctrl-z>', '<Esc>');
+// api.cmap('<Ctrl-z>', '<Esc>');
+api.cmap('<Ctrl-x>', '<Esc>');
 api.imap('<Ctrl-x>', "<Esc>"); //will quit from the input box
-api.vmap('<Ctrl-z>', "<Esc>");
+// api.vmap('<Ctrl-z>', "<Esc>");
+api.vmap('<Ctrl-x>', "<Esc>");
 
 // settings.lurkingPattern = /https:\/\/youtube\.com|.*confluence.*/i;
 
