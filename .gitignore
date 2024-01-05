@@ -6,3 +6,4 @@ terminals/.config/tmux/.tmux/resurrect/restore
 terminals/.config/tmux/.tmux/resurrect/pane_contents.tar.gz
 common/.config/cgdb/logs
 terminals/.config/tmux/plugins
+common/.config/lazygit/state.yml
