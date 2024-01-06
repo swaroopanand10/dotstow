@@ -4,6 +4,8 @@
 # ueberzug. This works in concert with the lf configuration file and the
 # lf-cleaner script.
 
+## I customized this for ueberzugpp
+
 set -e
 
 UB_PID=0
@@ -25,5 +27,5 @@ else
     UB_SOCKET="/tmp/ueberzugpp-${UB_PID}.socket"
     export UB_PID UB_SOCKET
     trap cleanup HUP INT QUIT TERM PWR EXIT
-    lf -config ~/.config/kitty/lfrc "$@" 3>&-
+    lf -config ~/.config/tmux/lfrc-ubpp "$@" 3>&-
 fi

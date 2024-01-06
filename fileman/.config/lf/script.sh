@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # if [[ $TERM == "xterm-kitty" ]]; then
-if { [ -n "$TMUX" ]; } then
-  ~/.config/lf/ub-lfub.sh
-elif { ! [ $TERM == "xterm-kitty" ]; } then
-  ~/.config/lf/ub-lfub.sh
+if { [ -n "$TMUX" ]; } then # if in tmux
+  ~/.config/lf/lfubpp.sh
+elif { ! [ $TERM == "xterm-kitty" ]; } then # if any other terminal than kitty
+  ~/.config/lf/lfubpp.sh
 else  
   lf 
 fi

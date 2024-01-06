@@ -20,15 +20,15 @@ set period 1
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 
 ### For kitty only (does not work well in tmux but is better otherwise)
-set previewer ctpv
-set cleaner ctpvclear
-&ctpv -s $id
-&ctpvquit $id
+# set previewer ctpv
+# set cleaner ctpvclear
+# &ctpv -s $id
+# &ctpvquit $id
 
 ### For other terminals than kitty or in tmux which uses ueberzugpp
-# set previewer '~/.config/lf/preview'
-# set cleaner '~/.config/lf/cleaner' 
-# set drawbox
+set previewer '~/.config/lf/preview'
+set cleaner '~/.config/lf/cleaner'
+set drawbox
 
 cmd eval &{{ # way to evaluate env var through eval
     cmd="send $id"

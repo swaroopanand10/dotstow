@@ -10,6 +10,19 @@ lfcd () {
 }
 # bindkey -s '^o' '^ulfcd\n' # removing this binding since bashrc does not recognize this
 
+lf() { # this will open lf with feature of changing directory if quitting it with Q
+    export LF_CD_FILE=/var/tmp/.lfcd-$$
+    command lf $@
+    if [ -s "$LF_CD_FILE" ]; then
+        local DIR="$(realpath "$(cat "$LF_CD_FILE")")"
+        if [ "$DIR" != "$PWD" ]; then
+            echo "cd to $DIR"
+            cd "$DIR"
+        fi
+        rm "$LF_CD_FILE"
+    fi
+    unset LF_CD_FILE
+}
 
 fkill() { # to kill a process using fzf
   pid=$(ps -ef | sed 1d | fzf -m --ansi --color fg:-1,bg:-1,hl:46,fg+:40,bg+:233,hl+:46 --color prompt:166,border:46 --height 40%  --border=sharp --prompt="➤  " --pointer="➤ " --marker="➤ " | awk '{print $2}')

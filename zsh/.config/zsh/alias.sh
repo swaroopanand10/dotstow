@@ -27,7 +27,7 @@ alias ytt='ytfzf -t -T swayimg-hyprland --url-handler-opts="--ytdl-format=best"'
 # alias lf='~/.config/lf/lfrun'
 # alias lf='~/.config/lf/ub-lfub.sh'
 alias lfp='~/.config/lf/script.sh'
-alias lfu='~/.config/lf/ub-lfub.sh'
+alias lfu='~/.config/lf/lfubpp.sh'
 
 ## Others
 alias ncm='ncmpcpp'
