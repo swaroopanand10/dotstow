@@ -42,7 +42,7 @@ window {
     height: 80%;
     background-color: @background;
     //border:           1;
-    padding:          10 10 20 20;
+    padding:          10 5 10 20;
     border: 2px solid ;
     border-color: rgba ( 128, 128, 128, 25%);
     border-radius: 10px;
