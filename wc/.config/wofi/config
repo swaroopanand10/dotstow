@@ -1,0 +1,13 @@
+hide_scroll=true
+mode=drun
+width=58%
+height=70%
+location=center
+insensitive=true
+prompt=Type...
+# key_exit=Alt_L-d
+key_exit=Control_L-d
+key_up=Control_L-k
+key_down=Control_L-j
+key_pgdn=Control_L-l
+key_pgup=Control_L-h

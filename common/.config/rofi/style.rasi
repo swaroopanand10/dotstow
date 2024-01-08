@@ -38,11 +38,13 @@
     selected-active-background:  rgba ( 20, 20, 17, 100 % );
 }
 window {
+    width: 70%;
+    height: 80%;
     background-color: @background;
     //border:           1;
     padding:          10 10 20 20;
     border: 2px solid ;
-    border-color: #808080;
+    border-color: rgba ( 128, 128, 128, 25%);
     border-radius: 10px;
 }
 mainbox {

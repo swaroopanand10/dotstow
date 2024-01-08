@@ -5,7 +5,7 @@ configuration {
   //drun-display-format: "{icon} {name}";
   drun-display-format: "{icon} {name}";
   window-format: "{c} {w} {t}";
-  font: "JetBrainsMono Nerd Font 18";
+  font: "JetBrainsMono Nerd Font 20";
   modi: "window,run,drun";
   show-icons: false;
   icons-theme: "Papirus";
