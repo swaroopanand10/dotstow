@@ -41,10 +41,10 @@
 }
 window {
     width: 70%;
-    height: 80%;
+    height: 82%;
     background-color: @background;
     //border:           1;
-    padding:          10 5 10 20;
+    padding:          10px 0px 0px 20px;
     border: 2px solid ;
     border-color: rgba ( 128, 128, 128, 25%);
     border-radius: 10px;
@@ -67,7 +67,7 @@ listview {
     border-color: @separatorcolor;
     spacing:      25px ;
     scrollbar:    true;
-    padding:      15px 0px 0px ;
+    padding:      18px 0px 0px 0px ;
 }
 element {
     border:  0;
