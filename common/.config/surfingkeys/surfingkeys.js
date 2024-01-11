@@ -334,10 +334,10 @@ settings.theme = `
     z-index: 2147483000;
   }
   div.sk_tab {
-    display: inline-block;
+    // display: inline-block;
     border-radius: 3px;
-    padding: 10px 20px;
-    margin: 5px;
+    // padding: 10px 20px;
+    // margin: 5px;
     // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#191724), color-stop(100%,#191724));
     // background:#000000;
     background: #191724;
@@ -354,7 +354,7 @@ settings.theme = `
     width: 18px;
   }
   div.sk_tab_title {
-    width: 150px;
+    // width: 150px;
     display: inline-block;
     vertical-align: middle;
     font-size: 10pt;
