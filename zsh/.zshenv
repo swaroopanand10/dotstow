@@ -52,6 +52,9 @@ export PATH=$PATH:/usr/local/go/bin
 
 # path variable for cargo
 export PATH=$PATH:$HOME/.cargo/bin
+
+# path variable for .local/bin
+export PATH=$PATH:$HOME/.local/bin
 ############################# PATH END #########################
 
 #### lf icons
