@@ -1,3 +1,6 @@
+# for inkscape
+set pagination off
+
 define bpl
     info breakpoints
 end
@@ -6,6 +9,7 @@ define st
     start
 end
 # source /home/swaroop/.gdbdashboard
+# source /usr/share/gdb-dashboard/.gdbinit
 source ~/repos/pwndbg/gdbinit.py
 # source /usr/share/pwndbg/gdbinit.py
 
