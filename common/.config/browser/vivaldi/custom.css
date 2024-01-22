@@ -1,12 +1,22 @@
-/*my custom css*/  
+/*my custom css*/
 
 /* removes vivaldi button */
 button.vivaldi {
-    display: none;
+  display: none;
 }
 
 /* moves tabs to the left to cover empty space */
 div#tabs-container {
-    position: relative;
-    left: -20px;
+  position: relative;
+  left: -20px;
+  font-family: JetBrainsMono Nerd Font;
 }
+
+.tab.active {
+  border-bottom: 1.5px solid #52b0ef;
+}
+
+/* changes the height of tab bar */
+/* .tab-strip>span>.tab-position { */
+/*   height: 25px !important; */
+/* } */

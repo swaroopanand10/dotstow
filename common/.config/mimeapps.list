@@ -33,6 +33,7 @@ application/xhtml+xml=org.gnome.Epiphany.desktop
 x-scheme-handler/etcher=balena-etcher.desktop
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/discord-1176718791388975124=discord-1176718791388975124.desktop
 
 [Added Associations]
 image/bmp=org.gnome.eog.desktop;
