@@ -1,0 +1,12 @@
+*##*:style(font-family: unset !important;) /* this will block webiste fonts and will apply custom fonts*/
+
+! 2024-01-21 https://www.javascripttutorial.net
+www.javascripttutorial.net##.sidebar.widget-area
+www.javascripttutorial.net##.site-main:style(width:130%;)
+
+! 2024-01-23 https://en.cppreference.com
+en.cppreference.com###footer-places
+||en.cppreference.com/mwiki/skins/common/images/poweredby_mediawiki_88x31.png$image
+||upload.cppreference.com/mwiki/images/2/2b/powered_by_geshi_88x31.png$image
+||upload.cppreference.com/mwiki/images/9/94/powered_by_tigertech_88x31.png$image
+
