@@ -47,6 +47,10 @@ par(){
  paru -Slq | fzf --layout=reverse -m --preview  'bat <(paru -Si {1}) <(paru -Fl {1} | awk "{print \$2}")' | xargs -ro  paru -S
 }
 
+lt(){
+leetcode l | fzf | awk -F'[][]' '{print $2}' | xargs leetcode e
+}
+
 source ~/.config/zsh/find-based-functions.sh
 source ~/.config/zsh/fd-based-functions.sh
 source ~/.config/zsh/grep-rg-based-functions.sh
