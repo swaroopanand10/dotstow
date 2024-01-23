@@ -121,3 +121,6 @@ alias cs="gcc -ggdb -pedantic-errors -Wall -Wextra -Wconversion -Wsign-conversio
 alias cvs="gcc -ggdb -pedantic-errors -Wall -Wextra -Wconversion -Wsign-conversion -Werror"
 # for gtk4
 alias ggcc='gcc `pkg-config --cflags gtk4` $1 `pkg-config --libs gtk4`'
+# leetcode related
+alias lte='leetcode exec'
+alias ltt='leetcode test'
