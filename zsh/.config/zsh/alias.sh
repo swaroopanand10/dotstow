@@ -29,6 +29,10 @@ alias ytt='ytfzf -t -T swayimg-hyprland --url-handler-opts="--ytdl-format=best"'
 alias lfp='~/.config/lf/script.sh'
 alias lfu='~/.config/lf/lfubpp.sh'
 
+## Yazi related
+alias ff='yazi'
+alias ffa='yazi_cd'
+
 ## Others
 alias ncm='ncmpcpp'
 alias cgrp='grep --color=always -i -n'

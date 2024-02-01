@@ -24,6 +24,15 @@ lf() { # this will open lf with feature of changing directory if quitting it wit
 	unset LF_CD_FILE
 }
 
+function yazi_cd() { # this will open yazi with feature of changing dir
+	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 fkill() { # to kill a process using fzf
 	pid=$(ps -ef | sed 1d | fzf -m --ansi --color fg:-1,bg:-1,hl:46,fg+:40,bg+:233,hl+:46 --color prompt:166,border:46 --height 40% --border=sharp --prompt="➤  " --pointer="➤ " --marker="➤ " | awk '{print $2}')
 
