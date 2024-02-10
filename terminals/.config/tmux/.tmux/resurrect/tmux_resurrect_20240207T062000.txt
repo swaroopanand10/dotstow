@@ -1,0 +1,99 @@
+pane	asm	1	1	:*	1	swaroop@archlinux:~/code/projects/asm	:/home/swaroop/code/projects/asm	1	zsh	:
+pane	basic_sketch	1	1	:*	1	archlinux	:/home/swaroop	1	zsh	:
+pane	basic_todo	1	1	:*	1	archlinux	:/home/swaroop	1	zsh	:
+pane	basic_todo	2	0	:	1	archlinux	:/home/swaroop	0	zsh	:
+pane	basic_todo	2	0	:	2	archlinux	:/home/swaroop	1	zsh	:
+pane	bsh	1	1	:*	1	swaroop@archlinux:~/code/prg/bash	:/home/swaroop/code/prg/bash	1	zsh	:
+pane	bsh	2	0	:	1	swaroop@archlinux:~	:/home/swaroop	1	zsh	:
+pane	c	1	1	:*	1	Ga=d,d=A	:/home/swaroop/code/prg/c/library	1	zsh	:
+pane	c	2	0	:	1	swaroop@archlinux:~/code/prg/c	:/home/swaroop/code/prg/c	1	zsh	:zsh
+pane	calculator	1	1	:*	1	archlinux	:/home/swaroop	1	zsh	:
+pane	calculator	2	0	:	1	archlinux	:/home/swaroop	0	zsh	:
+pane	calculator	2	0	:	2	archlinux	:/home/swaroop	1	zsh	:
+pane	calendar	1	1	:*	1	swaroop@archlinux:~	:/home/swaroop	1	zsh	:
+pane	calendar	2	0	:	1	swaroop@archlinux:~	:/home/swaroop	1	zsh	:
+pane	cf	1	1	:*	1	Ga=d,d=A	:/home/swaroop	1	zsh	:
+pane	cf	2	0	:	1	Ga=d,d=A	:/home/swaroop	1	zsh	:
+pane	con	1	1	:*	1	Ga=d,d=A	:/home/swaroop/dotstow	1	zsh	:zsh
+pane	con	2	0	:	1	Ga=d,d=A	:/home/swaroop/.config/nvim	1	zsh	:
+pane	con	3	0	:-	1	Ga=d,d=A	:/home/swaroop/.config/autoinstall	1	zsh	:
+pane	cpp	1	1	:*	1	Ga=d,d=A	:/home/swaroop/code/prg/cpp/library	1	zsh	:
+pane	cpp	2	0	:	1	swaroop@archlinux:~	:/home/swaroop/code/prg/cpp/library	1	zsh	:zsh
+pane	css-exercises	1	1	:*	1	archlinux	:/home/swaroop/code/projects/other/css-exercises/foundations	1	zsh	:
+pane	flatsync	1	0	:-	1	Ga=d,d=A	:/home/swaroop/code/os/flatsync/build/src	1	zsh	:
+pane	flatsync	2	1	:*	1	arch	:/home/swaroop/code/os/flatsync	1	nvim	:nvim
+pane	git	1	1	:*	1	archlinux	:/home/swaroop	1	zsh	:
+pane	gtk4tut	1	1	:*	1	swaroop@archlinux:~/code/projects/gtk4tut	:/home/swaroop/code/projects/gtk4tut	1	zsh	:
+pane	hfc_restart	1	1	:*	1	archlinux	:/home/swaroop/code/projects/hfc_restart	1	zsh	:
+pane	inkscape	1	1	:*	1	Ga=d,d=A	:/home/swaroop	1	zsh	:zsh
+pane	inkscape	2	0	:	1	swaroop@archlinux:~	:/home/swaroop	1	zsh	:
+pane	inkscape	3	0	:	1	archlinux	:/home/swaroop	1	zsh	:
+pane	js	1	1	:*	1	archlinux	:/home/swaroop/code/prg/js	1	zsh	:
+pane	landing_page	1	1	:*	1	Ga=d,d=A	:/home/swaroop	1	zsh	:
+pane	learncpp	1	1	:*	1	archlinux	:/home/swaroop	1	zsh	:
+pane	learncpp	2	0	:	1	archlinux	:/home/swaroop	1	zsh	:
+pane	neetcode	1	1	:*	1	archlinux	:/home/swaroop	1	zsh	:
+pane	neetcode	2	0	:	1	Ga=d,d=A	:/home/swaroop	1	zsh	:
+pane	neorg	1	1	:*	1	swaroop@archlinux:~/code/prg/neorg	:/home/swaroop	1	zsh	:
+pane	neorg	2	0	:	1	swaroop@archlinux:~/notes	:/home/swaroop	1	zsh	:
+pane	odin	1	1	:*	1	Ga=d,d=A	:/home/swaroop	1	zsh	:
+pane	odin	2	0	:	1	archlinux	:/home/swaroop	1	zsh	:
+pane	phosh	1	1	:*	1	archlinux	:/home/swaroop/code/projects/phosh-rel/phosh	1	zsh	:
+pane	phosh-settings	1	1	:*	1	archlinux	:/home/swaroop	1	zsh	:
+pane	phosh-settings	2	0	:-	1	Ga=d,d=A	:/home/swaroop	1	zsh	:
+pane	phosh-settings	3	0	:	1	archlinux	:/home/swaroop	1	zsh	:
+pane	phosh-settings	4	0	:	1	archlinux	:/home/swaroop	1	zsh	:
+pane	py	1	1	:*	1	archlinux	:/home/swaroop/code/prg/py	1	zsh	:
+pane	rs	1	1	:*	1	archlinux	:/home/swaroop/code/prg/rs/sample	1	zsh	:
+pane	rs	2	0	:	1	archlinux	:/home/swaroop/code/prg/rs	1	zsh	:
+pane	web	1	1	:*	1	swaroop@archlinux:~/code/prg/web	:/home/swaroop	1	zsh	:
+pane	web	2	0	:	1	archlinux	:/home/swaroop	1	zsh	:
+window	asm	1	:zsh	1	:*	c5fe,126x27,0,0,1	:
+window	basic_sketch	1	:	1	:*	bebf,118x25,0,0,2	off
+window	basic_todo	1	:	1	:*	bec0,118x25,0,0,3	off
+window	basic_todo	2	:zsh	0	:	865b,126x27,0,0{83x27,0,0,4,42x27,84,0,5}	:
+window	bsh	1	:zsh	1	:*	bec3,118x25,0,0,6	:
+window	bsh	2	:zsh	0	:	c604,126x27,0,0,7	:
+window	c	1	:c	1	:*	c605,126x27,0,0,8	off
+window	c	2	:zsh	0	:	c606,126x27,0,0,9	:
+window	calculator	1	:	1	:*	632f,126x27,0,0,10	off
+window	calculator	2	:zsh	0	:	0240,126x27,0,0{63x27,0,0,11,62x27,64,0,12}	:
+window	calendar	1	:zsh	1	:*	6332,126x27,0,0,13	:
+window	calendar	2	:zsh	0	:	6333,126x27,0,0,14	:
+window	cf	1	:zsh	1	:*	6334,126x27,0,0,15	:
+window	cf	2	:zsh	0	:	6335,126x27,0,0,16	:
+window	con	1	:df	1	:*	6336,126x27,0,0,17	off
+window	con	2	:nc	0	:	6137,126x26,0,0,18	off
+window	con	3	:ic	0	:-	6338,126x27,0,0,19	off
+window	cpp	1	:cpp	1	:*	e32f,126x27,0,0,20	off
+window	cpp	2	:zsh	0	:	e330,126x27,0,0,21	:
+window	css-exercises	1	:zsh	1	:*	df91,118x25,0,0,22	:
+window	flatsync	1	:zsh	0	:-	e339,126x27,0,0,49	:
+window	flatsync	2	:nvim	1	:*	6331,126x27,0,0,50	:
+window	git	1	:/home/swaroop/Desktop/gitrepo	1	:*	e332,126x27,0,0,23	off
+window	gtk4tut	1	:zsh	1	:*	e333,126x27,0,0,24	:
+window	hfc_restart	1	:zsh	1	:*	e334,126x27,0,0,25	:
+window	inkscape	1	:zsh	1	:*	df95,118x25,0,0,26	:
+window	inkscape	2	:zsh	0	:	df96,118x25,0,0,27	:
+window	inkscape	3	:zsh	0	:	df97,118x25,0,0,28	:
+window	js	1	:zsh	1	:*	e138,126x26,0,0,29	:
+window	landing_page	1	:/home/swaroop/code/projects/sample_landing_page	1	:*	6330,126x27,0,0,30	off
+window	learncpp	1	:zsh	1	:*	6331,126x27,0,0,31	:
+window	learncpp	2	:zsh	0	:	6332,126x27,0,0,32	:
+window	neetcode	1	:/home/swaroop/code/cf/neetcode	1	:*	6333,126x27,0,0,33	off
+window	neetcode	2	:zsh	0	:	6334,126x27,0,0,34	:
+window	neorg	1	:zsh	1	:*	6335,126x27,0,0,35	:
+window	neorg	2	:zsh	0	:	6336,126x27,0,0,36	:
+window	odin	1	:	1	:*	5f97,118x25,0,0,37	off
+window	odin	2	:zsh	0	:	5f98,118x25,0,0,38	:
+window	phosh	1	:zsh	1	:*	6339,126x27,0,0,39	:
+window	phosh-settings	1	:phosh	1	:*	e330,126x27,0,0,40	off
+window	phosh-settings	2	:zsh	0	:-	e331,126x27,0,0,41	:
+window	phosh-settings	3	:zsh	0	:	e332,126x27,0,0,42	:
+window	phosh-settings	4	:zsh	0	:	df93,118x25,0,0,43	:
+window	py	1	:zsh	1	:*	e334,126x27,0,0,44	:
+window	rs	1	:zsh	1	:*	e335,126x27,0,0,45	:
+window	rs	2	:zsh	0	:	e336,126x27,0,0,46	:
+window	web	1	:zsh	1	:*	e337,126x27,0,0,47	:
+window	web	2	:zsh	0	:	df98,118x25,0,0,48	:
+state	phosh	phosh-settings
