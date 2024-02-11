@@ -1,0 +1,25 @@
+[code]
+editor = 'nvim'
+# Optional parameter
+# editor_args = ['-nw']
+# Optional environment variables (ex. [ "XDG_DATA_HOME=...", "XDG_CONFIG_HOME=...", "XDG_STATE_HOME=..." ])
+editor_envs = []
+lang = 'rust'
+edit_code_marker = true
+start_marker = "start_marker"
+end_marker = "end_marker"
+# if include problem description
+comment_problem_desc = true
+# comment syntax
+comment_leading = "//"
+test = true
+
+[cookies]
+csrf = '<your-leetcode-csrf-token>'
+session = '<your-leetcode-session-key>'
+
+[storage]
+cache = 'Problems'
+code = 'code'
+root = '~/code/cf/neetcode'
+scripts = 'scripts'
