@@ -282,11 +282,11 @@ map <enter> shell
 map o &mimeopen $f
 map O $mimeopen --ask $f
 
-map c push i<c-e><c-u> # new rename
-map A push i<c-e>  # at the very end
-map I push i<c-a> # at the very beginning
-map a push i<a-f><a-b> # after extension(dot)
-map i rename # before extension
+map i push r<c-e><c-u> # new rename
+map A push r<c-e>  # at the very end
+map I push r<c-a> # at the very beginning
+map a push r<a-f><a-b> # after extension(dot)
+map r rename # before extension
 # map i push A<a-b><a-b><a-f> # before extension(dot)
 
 # map bg bulk-rename # only file name

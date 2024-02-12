@@ -22,6 +22,7 @@ alias yta='yt-dlp -x -f bestaudio'
 alias ytv='yt-dlp '
 alias yt='ytfzf --url-handler-opts="--ytdl-format=best"'
 alias ytt='ytfzf -t -T swayimg-hyprland --url-handler-opts="--ytdl-format=best"'
+alias mt='wl-paste | xargs mpv'
 
 ## LF related
 # alias lf='~/.config/lf/lfrun'
