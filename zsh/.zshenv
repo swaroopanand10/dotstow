@@ -15,9 +15,6 @@ export CGDB_DIR=$HOME/.config/cgdb
 
 ### Other Stuff
 export LC_ALL=en_US.UTF-8
-XDG_CURRENT_DESKTOP=Hyprland
-XDG_SESSION_TYPE=wayland
-XDG_SESSION_DESKTOP=Hyprland
 
 #### GIMP related stuff start #######################################
 export GIMP_PREFIX="${HOME}/gimp"
