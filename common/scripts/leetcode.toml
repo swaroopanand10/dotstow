@@ -1,0 +1,32 @@
+#### This is the custom config file for clearloop/leetcode-cli for cpp
+#### will work after pasting cookies
+#### It resides in ~/.leetcode/
+
+[code]
+editor = 'nvim'
+# Optional parameter
+# editor_args = ['-nw']
+# Optional environment variables (ex. [ "XDG_DATA_HOME=...", "XDG_CONFIG_HOME=...", "XDG_STATE_HOME=..." ])
+editor_envs = []
+lang = 'cpp'
+edit_code_marker = true
+start_marker = "start_marker"
+end_marker = "end_marker"
+# if include problem description
+comment_problem_desc = true
+# comment syntax
+comment_leading = "//"
+test = true
+# for cpp only
+inject_before = ["#include<bits/stdc++.h>", "using namespace std;"]
+inject_after = ["int main() {\n    Solution solution;\n\n}"]
+
+[cookies]
+csrf = '<your-leetcode-csrf-token>'
+session = '<your-leetcode-session-key>'
+
+[storage]
+cache = 'Problems'
+code = 'code'
+root = '~/code/cf/neetcode'
+scripts = 'scripts'
