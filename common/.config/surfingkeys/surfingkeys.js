@@ -5,8 +5,13 @@ api.mapkey('<ctrl-y>', 'Show me the money', function() {
 
 // an example to replace `T` with `gt`, click `Default mappings` to see how `T` works.
 api.map('gt', 'T');
-// api.map('S', 'T'); // for easyness
 api.map('<Alt-e>', 'T'); // for easyness
+
+// for searching through tabs using omnibar
+api.mapkey('<Alt-f>', 'Choose a tab with omnibar', function() {
+    api.Front.openOmnibar({type: "Tabs"});
+});
+
 // api.map('<Ctrl-z>', '<Esc>');
 api.map('<Ctrl-x>', '<Esc>');
 
@@ -328,14 +333,16 @@ settings.theme = `
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    // height: 100%; // this was causing links to now show on tabs on same line
     background: transparent;
     overflow: auto;
     z-index: 2147483000;
   }
   div.sk_tab {
-    // display: inline-block;
+    display: inline-block;
+    border: solid 1px #524f67;
     border-radius: 3px;
+    overflow: clip;
     // padding: 10px 20px;
     // margin: 5px;
     // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#191724), color-stop(100%,#191724));
@@ -373,7 +380,7 @@ settings.theme = `
   }
   div.sk_tab_hint {
     display: inline-block;
-    float:right;
+    // float:right;
     font-size: 10pt;
     font-size: 13pt;
     font-weight: bold;
