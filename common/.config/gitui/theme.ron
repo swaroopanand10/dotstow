@@ -1,0 +1,4 @@
+( // for better visibility
+    selection_bg: Some(Black),
+    selection_fg: Some(White),
+)

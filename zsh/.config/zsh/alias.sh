@@ -59,7 +59,7 @@ alias pa='playerctl --list-all | xargs -L1 playerctl pause -p' # will pause all 
 ## Nvim
 alias sv='sudoedit'
 alias v='nvim'
-alias dv='NVIM_APPNAME=nvim-def nvim'
+alias dv='NVIM_APPNAME=lazyvimd nvim'
 alias lv='NVIM_APPNAME=lazyvim nvim'
 alias nv='NVIM_APPNAME=custom nvim'
 alias kv='$HOME/repos/neovim/bin/nvim'
