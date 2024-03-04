@@ -18,6 +18,16 @@ jd(){
   dir=$(fd . ${1:-$HOME} -t d -u 2> /dev/null | fzf --layout=reverse +m --preview 'tree -C {} | head -200') && cd "$dir"
 }
 
+jdd(){
+  local dir
+  dir=$(fd . -t d -u 2> /dev/null | fzf --layout=reverse +m --preview 'tree -C {} | head -200') && cd "$dir"
+}
+
+jdn(){
+  local dir
+  dir=$(fd . -t d 2> /dev/null | fzf --layout=reverse +m --preview 'tree -C {} | head -200') && cd "$dir"
+}
+
 je(){
   local file
   file=$(fd . ${1:-$HOME} -u -E "*.exe"\
@@ -31,7 +41,7 @@ je(){
   -E "*.opus"\
   -E "*.docx"\
   -tf -ts \
-  2> /dev/null | fzf --layout=reverse +m --preview='bat --color=always {}') && nvim "$file"  
+  2> /dev/null | fzf --layout=reverse +m --preview='bat --color=always {}') && nvim "$file"
 }
 
 jc(){
@@ -47,7 +57,7 @@ jc(){
   -E "*.opus"\
   -E "*.docx"\
   -tf -ts \
-  2> /dev/null | fzf --layout=reverse +m --preview='bat --color=always {}') && nvim "$file"  
+  2> /dev/null | fzf --layout=reverse +m --preview='bat --color=always {}') && nvim "$file"
 }
 
 jn(){
@@ -63,6 +73,6 @@ jn(){
   -E "*.opus"\
   -E "*.docx"\
   -tf -ts \
-  2> /dev/null | fzf --layout=reverse +m --preview='bat --color=always {}') && nvim "$file"  
+  2> /dev/null | fzf --layout=reverse +m --preview='bat --color=always {}') && nvim "$file"
 }
 
