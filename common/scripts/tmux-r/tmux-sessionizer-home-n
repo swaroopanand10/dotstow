@@ -6,7 +6,7 @@ else
 	# selected=$(find ~/work/builds ~/projects ~/ ~/work ~/personal ~/personal/yt -mindepth 1 -maxdepth 1 -type d | fzf)
 	# selected=$(find ~/Desktop ~/Documents ~/gnome-projects ~/opensource ~/Projects -mindepth 1 -maxdepth 1 -type d | fzf --layout=reverse)
 
-	selected=$(fd . ${1:-$HOME} --type d | fzf) # this searches normal files in home dir
+	selected=$(fd . ${1:-$HOME} --type d | fzf --preview 'echo {}' --preview-window down:2) # this searches normal files in home dir
 fi
 
 if [[ -z $selected ]]; then
