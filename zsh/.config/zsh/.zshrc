@@ -18,6 +18,9 @@ source $HOME/.config/zsh/manpager.sh
 ### sourcing completion file
 source $HOME/.config/zsh/completion.sh
 
+#### sourcing gh completion file
+source $HOME/.config/zsh/ghcompletion.sh
+
 ### Sourcing vi-mode file
 source $HOME/.config/zsh/vimode.sh
 

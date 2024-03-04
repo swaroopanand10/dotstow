@@ -48,7 +48,7 @@ alias pa='playerctl --list-all | xargs -L1 playerctl pause -p' # will pause all 
 # alias play='mpv --audio-file=<(yt-dlp '$0' -o -) <(yt-dlp '$0' -o -)'
 
 ## Emacs
-# alias dmi='git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs 
+# alias dmi='git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 # ~/.config/emacs/bin/doom install'
 # alias dms='install -D ~/.config/doom/sessions/* ~/.config/emacs/.local/etc/workspaces/'
 # alias dmss='cp ~/.config/emacs/.local/etc/workspaces/* ~/.config/doom/sessions/'
@@ -62,6 +62,8 @@ alias v='nvim'
 alias dv='NVIM_APPNAME=lazyvimd nvim'
 alias lv='NVIM_APPNAME=lazyvim nvim'
 alias nv='NVIM_APPNAME=custom nvim'
+alias nvk='NVIM_APPNAME=nvim2k nvim'
+alias kcv='NVIM_APPNAME=kickstart nvim'
 alias kv='$HOME/repos/neovim/bin/nvim'
 
 ## Stow
@@ -103,7 +105,7 @@ alias wfl='nmcli device wifi list'
 alias wfs='nmcli device wifi rescan'
 alias wfc='nmcli device wifi connect'
 alias ndc='nmcli device connect' # connect to any device
-alias ndd='nmcli device disconnect' # disconnect go connected device 
+alias ndd='nmcli device disconnect' # disconnect go connected device
 alias nno='nmcli networking on' # enabling networking
 alias nnf='nmcli networking off' # disabling networking
 alias nwo='nmcli radio wifi on' # enabling wifi
