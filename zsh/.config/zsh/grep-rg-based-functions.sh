@@ -1,19 +1,19 @@
-# This also searches in hidden files but uses grep
-fgr() {
+#Prints This also searches in hidden files but uses grep
+sgr() {
 	local text
-	text=$(grep --color=always --line-number -i -I --recursive ${1} ${2:-.} | fzf --multi --ansi --layout=reverse --delimiter : --preview-window +{2}-/2:cycle --preview 'bat --theme="Dracula" --style=numbers --color=always --highlight-line {2} {1}') && echo "$text"
+	text=$(grep --color=always --line-number -i -I --recursive ${1} ${2:-.} | fzf --multi --ansi --layout=reverse --delimiter : --preview-window +{2}-/2:cycle --preview 'bat --theme="Dracula" --style=numbers --color=always --highlight-line {2} {1}') && echo "./$text"
 }
 
-# Normal files excluding hidden and .gitignore
-frg() {
+# Prints Normal files excluding hidden and .gitignore
+srg() {
 	local text
-	text=$(rg --color=always --line-number --smart-case --no-heading --column ${1} ${2:-.} | fzf --multi --ansi --layout=reverse --delimiter : --preview-window +{2}-/2 --preview 'bat --theme="Dracula" --style=numbers --color=always --highlight-line {2} {1}') && echo $text
+	text=$(rg --color=always --line-number --smart-case --no-heading --column ${1} ${2:-.} | fzf --multi --ansi --layout=reverse --delimiter : --preview-window +{2}-/2 --preview 'bat --theme="Dracula" --style=numbers --color=always --highlight-line {2} {1}') && echo "./$text"
 }
 
-# All files including hidden
-frga() {
+# Prints All files including hidden (multi feature)
+srga() {
 	local text
-	text=$(rg --color=always --line-number --smart-case --no-heading --column --no-ignore --hidden ${1} ${2:-.} 2>/dev/null | fzf --multi --ansi --layout=reverse +m --delimiter : --preview-window +{2}-/2:cycle --preview 'bat --theme="Dracula" --style=numbers --color=always --highlight-line {2} {1}') && echo $text
+	text=$(rg --color=always --line-number --smart-case --no-heading --column --no-ignore --hidden ${1} ${2:-.} 2>/dev/null | fzf --multi --ansi --layout=reverse --delimiter : --preview-window +{2}-/2:cycle --preview 'bat --theme="Dracula" --style=numbers --color=always --highlight-line {2} {1}') && echo "./$text"
 }
 
 ## Attempt to open create a function to open multiple selections in respective files at once
