@@ -36,6 +36,8 @@ alias ffa='yazi_cd'
 
 ## Others
 alias ncm='ncmpcpp'
+alias grp='grep --color=always -n'
+alias grpp='grep --color=always -n -P'
 alias cgrp='grep --color=always -i -n'
 alias rgrp='grep --color=always -i -n -r -I'
 alias crg='rg --color=always -n --column -S --no-heading'
