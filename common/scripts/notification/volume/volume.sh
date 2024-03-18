@@ -40,7 +40,7 @@ function send_notification {
 			fi
 		fi
 	fi
-  ## only send volume notfication if unmuted other wise send mute notification 
+	## only send volume notfication if unmuted other wise send mute notification
 	if [ $bool_mute = "false" ]; then
 		bar=$(seq -s " " $(($volume)) | sed 's/[0-9]//g')
 		# Send the notification
@@ -54,8 +54,8 @@ up)
 	# Set the volume on (if it was muted)
 	# pamixer -u
 	# Up the volume (+ 5%)
-  volume=$(get_volume)
-  bool_mute=$(is_mute)
+	volume=$(get_volume)
+	bool_mute=$(is_mute)
 
 	if [ "$volume" -lt "65" ]; then
 		if [ $bool_mute = "false" ]; then
@@ -73,8 +73,8 @@ down)
 	;;
 mute)
 	# Toggle mute
-  pamixer -t
-  pamixer --set-volume 0
+	pamixer -t
+	pamixer --set-volume 0
 	bool_mute=$(is_mute)
 	if [ $bool_mute = "true" ]; then
 		DIR=$(dirname "$0")
@@ -82,5 +82,12 @@ mute)
 	else
 		send_notification
 	fi
+	;;
+minimal) ## to set the volume at 30 instantly
+	bool_mute=$(is_mute)
+	if [ $bool_mute = "false" ]; then
+		pamixer --set-volume 30
+	fi
+	send_notification
 	;;
 esac
