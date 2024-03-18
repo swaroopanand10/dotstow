@@ -49,6 +49,7 @@ alias hn='hostname'
 alias pa='playerctl --list-all | xargs -L1 playerctl pause -p' # will pause all media (exept chrome inactive tabs)
 alias cl='clear'
 alias sb='swaybg -c "#000000"'
+alias pi='kitty icat'
 # alias play='mpv --audio-file=<(yt-dlp '$0' -o -) <(yt-dlp '$0' -o -)'
 
 ## Emacs
