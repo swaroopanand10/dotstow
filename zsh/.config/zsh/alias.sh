@@ -3,7 +3,7 @@
 ## ls related
 alias ll='lsd -alh'
 alias ls='ls --color=auto'
-alias l='lsd -l'   # show long listing but no hidden dotfiles except "."
+alias l='lsd -l' # show long listing but no hidden dotfiles except "."
 
 ## Tmux related
 alias mx='pgrep -vx tmux > /dev/null && \
@@ -15,7 +15,6 @@ alias ms='tmux-sessionizer'
 alias tms='tmux source-file ~/.config/tmux/tmux.conf'
 alias tmk='tmux kill-server'
 # alias mux='pgrep -vxq tmux && tmux new -d -s delete-me && tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && tmux kill-session -t delete-me && tmux attach || tmux attach'
-
 
 ## Youtube related
 alias yta='yt-dlp -x -f bestaudio'
@@ -36,6 +35,7 @@ alias ffa='yazi_cd'
 
 ## Others
 alias ncm='ncmpcpp'
+alias refmpd='rm -rf ~/dotstow/media/.config/mpd/{database,state,pid,sticker.sql} && touch ~/dotstow/media/.config/mpd/database'
 alias grp='grep --color=always -n'
 alias grpp='grep --color=always -n -P'
 alias cgrp='grep --color=always -i -n'
@@ -59,7 +59,6 @@ alias pi='kitty icat'
 # alias dmss='cp ~/.config/emacs/.local/etc/workspaces/* ~/.config/doom/sessions/'
 # alias dmsb='mkdir /home/swaroop/.config/doom/sessions-bak/$(date +%Y%m%d_%H%M%S) && cp /home/swaroop/.config/doom/sessions/* /home/swaroop/.config/doom/sessions-bak/$(date +%Y%m%d_%H%M%S)'
 # alias ked='killall emacs ; emacs --daemon &'
-
 
 ## Nvim
 alias sv='sudoedit'
@@ -103,19 +102,19 @@ alias V_reset='rm -rf .config/vivaldi .cache/vivaldi'
 
 ## Networking
 alias hta='nmcli device wifi hotspot ssid "swarooplatpot" password anand2002' # start hotspot with these config(will resave config)
-alias ht='nmcli con up Hotspot' # for turning on hotspot with already saved hotspot config
-alias ncu='nmcli con up' # this is for connecting to already saved connection(provide connection after it)
-alias htn='nmcli device wifi hotspot' # give credientials after this to start hotspot with those
+alias ht='nmcli con up Hotspot'                                               # for turning on hotspot with already saved hotspot config
+alias ncu='nmcli con up'                                                      # this is for connecting to already saved connection(provide connection after it)
+alias htn='nmcli device wifi hotspot'                                         # give credientials after this to start hotspot with those
 alias wfl='nmcli device wifi list'
 alias wfs='nmcli device wifi rescan'
 alias wfc='nmcli device wifi connect'
-alias ndc='nmcli device connect' # connect to any device
+alias ndc='nmcli device connect'    # connect to any device
 alias ndd='nmcli device disconnect' # disconnect go connected device
-alias nno='nmcli networking on' # enabling networking
-alias nnf='nmcli networking off' # disabling networking
-alias nwo='nmcli radio wifi on' # enabling wifi
-alias nwf='nmcli radio wifi off' # disabling wifi
-alias ncs='nmcli connection show' # show current connection info
+alias nno='nmcli networking on'     # enabling networking
+alias nnf='nmcli networking off'    # disabling networking
+alias nwo='nmcli radio wifi on'     # enabling wifi
+alias nwf='nmcli radio wifi off'    # disabling wifi
+alias ncs='nmcli connection show'   # show current connection info
 
 ## distrobox
 alias dsa='distrobox create -i quay.io/toolbx-images/archlinux-toolbox:latest -n'
