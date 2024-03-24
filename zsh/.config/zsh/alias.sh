@@ -92,6 +92,7 @@ alias gp='git push'
 alias gs='git status'
 alias gl='git log'
 alias gd='git diff'
+alias gsw='git switch'
 alias lg='lazygit'
 
 ## Vivaldi preferences saving
