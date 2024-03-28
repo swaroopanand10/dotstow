@@ -125,7 +125,8 @@
     "spacing": 10
   },
   "clock": {
-    "format": "{: %H:%M:%S   %d/%m/%y}",
+    // "format": "{: %H:%M:%S   %d/%m/%y}",
+    "format": " {:%H:%M:%S   %d/%m/%y}",
     "interval": 1,
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {

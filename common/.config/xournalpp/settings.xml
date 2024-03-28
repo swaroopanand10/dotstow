@@ -3,7 +3,7 @@
 <settings>
   <property name="pressureSensitivity" value="true"/>
   <property name="minimumPressure" value="0.05"/>
-  <property name="pressureMultiplier" value="1"/>
+  <property name="pressureMultiplier" value="1.77"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="custom Copy"/>
   <property name="lastSavePath" value="/home/swaroop/Videos"/>
