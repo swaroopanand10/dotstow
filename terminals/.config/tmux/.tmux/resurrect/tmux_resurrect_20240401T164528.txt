@@ -1,0 +1,65 @@
+pane	asm	1	1	:*	1	swaroop@archlinux:~/code/projects/asm	:/home/swaroop/code/projects/asm	1	zsh	:
+pane	c	1	1	:*	1	Ga=d,d=A	:/home/swaroop/code/prg/c	1	zsh	:
+pane	c	2	0	:-	1	swaroop@archlinux:~/code/prg/c	:/home/swaroop/code/prg/c	1	zsh	:zsh
+pane	calculator	1	1	:*	1	archlinux	:/home/swaroop/code/projects/gui_calculator	1	zsh	:
+pane	calculator	2	0	:	1	arch	:/home/swaroop/code/projects/gui_calculator	1	zsh	:
+pane	cf	1	1	:*	1	Ga=d,d=A	:/home/swaroop/code/cf	1	zsh	:
+pane	cf	2	0	:	1	Ga=d,d=A	:/home/swaroop	1	zsh	:
+pane	con	1	0	:	1	Ga=d,d=A	:/home/swaroop/dotstow	1	zsh	:
+pane	con	2	1	:*	1	Ga=d,d=A	:/home/swaroop/.config/nvim	1	nvim	:nvim
+pane	con	3	0	:-	1	Ga=d,d=A	:/home/swaroop/.config/autoinstall	1	zsh	:
+pane	con	4	0	:	1	arch	:/home/swaroop/.config/custom	1	zsh	:
+pane	cpp	1	1	:*	1	Ga=d,d=A	:/home/swaroop/code/prg/cpp/library	1	nvim	:nvim
+pane	cpp	2	0	:-	1	swaroop@archlinux:~	:/home/swaroop/code/prg/cpp/library	1	zsh	:zsh
+pane	css	1	1	:*	1	Ga=d,d=A	:/home/swaroop/code/prg/css/grid	1	zsh	:
+pane	css	2	0	:	1	arch	:/home/swaroop/code/prg/css/grid	1	zsh	:
+pane	css-exercises	1	1	:*	1	Ga=d,d=A	:/home/swaroop/code/projects/other/css-exercises/grid/03-grid-layout-3	1	yazi	:yazi
+pane	css-exercises	2	0	:	1	arch	:/home/swaroop/code/projects/other/css-exercises/grid/03-grid-layout-3	1	zsh	:
+pane	git	1	1	:*	1	archlinux	:/home/swaroop	1	zsh	:
+pane	hello_cargo	1	1	:*	1	arch	:/home/swaroop/code/prg/rs/hello_cargo	1	zsh	:
+pane	hfc_restart	1	1	:*	1	archlinux	:/home/swaroop/code/projects/hfc_restart	1	zsh	:
+pane	js	1	1	:*	1	Ga=d,d=A	:/home/swaroop/code/prg/js	1	zsh	:
+pane	js	2	0	:	1	arch	:/home/swaroop/notes/js	1	zsh	:
+pane	neetcode	1	1	:*	1	archlinux	:/home/swaroop	1	zsh	:
+pane	neetcode	2	0	:	1	arch	:/home/swaroop/code/cf	1	zsh	:
+pane	neorg	1	1	:*	1	swaroop@archlinux:~/code/prg/neorg	:/home/swaroop/notes/default	1	zsh	:
+pane	neorg	2	0	:	1	swaroop@archlinux:~/notes	:/home/swaroop/notes/unix	1	zsh	:
+pane	proc	1	1	:*	1	arch	:/home/swaroop/code/prg/c_proc	1	zsh	:
+pane	proc	2	0	:	1	Ga=d,d=A	:/home/swaroop/code/prg/c_proc	1	zsh	:
+pane	proc	3	0	:	1	arch	:/home/swaroop/notes/cprg	1	zsh	:
+pane	unix	1	1	:*	1	arch	:/home/swaroop/code/prg/unix	1	zsh	:
+pane	zig	1	1	:*	1	Ga=d,d=A	:/home/swaroop/code/prg/zig	1	nvim	:nvim
+pane	zig	2	0	:-	1	arch	:/home/swaroop/code/prg/zig	1	zsh	:
+window	asm	1	:zsh	1	:*	c3de,87x18,0,0,1	:
+window	c	1	:c	1	:*	c3df,87x18,0,0,2	off
+window	c	2	:zsh	0	:-	b3c0,112x23,0,0,3	:
+window	calculator	1	:	1	:*	c3e1,87x18,0,0,4	off
+window	calculator	2	:zsh	0	:	c3e2,87x18,0,0,5	:
+window	cf	1	:zsh	1	:*	cb03,128x28,0,0,6	:
+window	cf	2	:zsh	0	:	c3e4,87x18,0,0,7	:
+window	con	1	:df	0	:	bde5,83x17,0,0,8	off
+window	con	2	:nc	1	:*	bb26,76x16,0,0,9	off
+window	con	3	:ic	0	:-	5f1f,83x17,0,0,10	off
+window	con	4	:zsh	0	:	6330,126x27,0,0,11	:
+window	cpp	1	:cpp	1	:*	6221,87x18,0,0,12	off
+window	cpp	2	:zsh	0	:-	6222,87x18,0,0,13	:
+window	css	1	:zsh	1	:*	5303,96x20,0,0,14	:
+window	css	2	:zsh	0	:	5304,96x20,0,0,15	:
+window	css-exercises	1	:yazi	1	:*	5305,96x20,0,0,16	:
+window	css-exercises	2	:zsh	0	:	5306,96x20,0,0,17	:
+window	git	1	:/home/swaroop/Desktop/gitrepo	1	:*	6227,87x18,0,0,18	off
+window	hello_cargo	1	:zsh	1	:*	6228,87x18,0,0,19	:
+window	hfc_restart	1	:zsh	1	:*	e21f,87x18,0,0,20	:
+window	js	1	:zsh	1	:*	e5b0,128x28,0,0,21	:
+window	js	2	:zsh	0	:	df61,69x26,0,0,22	:
+window	neetcode	1	:/home/swaroop/code/cf/neetcode	1	:*	e222,87x18,0,0,23	off
+window	neetcode	2	:zsh	0	:	e223,87x18,0,0,24	:
+window	neorg	1	:zsh	1	:*	e224,87x18,0,0,25	:
+window	neorg	2	:zsh	0	:	e225,87x18,0,0,26	:
+window	proc	1	:nvim	1	:*	e226,87x18,0,0,27	off
+window	proc	2	:zsh	0	:	e227,87x18,0,0,28	:
+window	proc	3	:zsh	0	:	e228,87x18,0,0,29	:
+window	unix	1	:zsh	1	:*	6330,126x27,0,0,30	:
+window	zig	1	:	1	:*	5dc1,76x16,0,0,31	off
+window	zig	2	:zsh	0	:-	5f22,83x17,0,0,32	:
+state	con	zig
