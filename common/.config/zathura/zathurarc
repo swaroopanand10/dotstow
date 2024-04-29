@@ -1,7 +1,7 @@
 set recolor true
 
 set scroll-step 50
-set adjust-open "width" 
+set adjust-open "width"
 #set adjust-open "best-fit"
 
 # colors
@@ -72,6 +72,7 @@ set statusbar-home-tilde true
 set page-right-to-left true
 set recolor-reverse-video true
 set selection-clipboard clipboard
+set database sqlite
 
 # remove default key bindings
 unmap <C-n>
