@@ -339,7 +339,8 @@ settings.theme = `
     z-index: 2147483000;
   }
   div.sk_tab {
-    display: inline-block;
+    // display: inline-block; // this is causing tabs to be in the same line without hints
+    display: block;
     border: solid 1px #524f67;
     border-radius: 3px;
     overflow: clip;
