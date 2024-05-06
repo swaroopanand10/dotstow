@@ -52,13 +52,15 @@ alias sb='swaybg -c "#000000"'
 alias pi='kitty icat'
 # alias play='mpv --audio-file=<(yt-dlp '$0' -o -) <(yt-dlp '$0' -o -)'
 
-## Emacs
+# ## Emacs
 # alias dmi='git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 # ~/.config/emacs/bin/doom install'
-# alias dms='install -D ~/.config/doom/sessions/* ~/.config/emacs/.local/etc/workspaces/'
-# alias dmss='cp ~/.config/emacs/.local/etc/workspaces/* ~/.config/doom/sessions/'
-# alias dmsb='mkdir /home/swaroop/.config/doom/sessions-bak/$(date +%Y%m%d_%H%M%S) && cp /home/swaroop/.config/doom/sessions/* /home/swaroop/.config/doom/sessions-bak/$(date +%Y%m%d_%H%M%S)'
+# # alias dms='install -D ~/.config/doom/sessions/* ~/.config/emacs/.local/etc/workspaces/'
+# # alias dmss='cp ~/.config/emacs/.local/etc/workspaces/* ~/.config/doom/sessions/'
+# # alias dmsb='mkdir /home/swaroop/.config/doom/sessions-bak/$(date +%Y%m%d_%H%M%S) && cp /home/swaroop/.config/doom/sessions/* /home/swaroop/.config/doom/sessions-bak/$(date +%Y%m%d_%H%M%S)'
 # alias ked='killall emacs ; emacs --daemon &'
+# alias doom='~/.config/emacs/bin/doom'
+# alias dme='emacsclient -c -a "emacs"'
 
 ## Nvim
 alias sv='sudoedit'
