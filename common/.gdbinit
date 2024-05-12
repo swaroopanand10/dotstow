@@ -13,6 +13,3 @@ source /usr/share/gdb-dashboard/.gdbinit
 
 set follow-fork-mode parent
 set debuginfod enabled on
-
-# source ~/splitmind/gdbinit.py
-source ~/repos/splitmind/gdbinit.py
