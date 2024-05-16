@@ -1,0 +1,24 @@
+{
+	"name": "Vimium C",
+	"@time": "5/16/2024, 1:09:58 PM",
+	"time": 1715845198578,
+	"environment": {
+		"extension": "1.99.997",
+		"platform": "linux",
+		"firefox": 125
+	},
+	"exclusionRules": [],
+	"keyLayout": 2,
+	"keyMappings": [
+		"#!no-check",
+		"mapKey <c-z> <esc>",
+		"mapKey <c-e> <esc>",
+		"map ee Vomnibar.activateTabs",
+		"map <a-f> Vomnibar.activateTabs",
+		"mapKey <c-b> <^>",
+		""
+	],
+	"keyupTime": 110,
+	"scrollStepSize": 50,
+	"vimSync": true
+}
