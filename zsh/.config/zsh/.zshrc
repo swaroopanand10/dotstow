@@ -1,11 +1,14 @@
 HISTFILE=~/.histfile
 HISTSIZE=8000 # no of lines of history kept within the shell
 SAVEHIST=8000 # no of lines of history to save to histfile
-setopt autocd extendedglob nomatch notify
+setopt autocd extendedglob nomatch notify appendhistory sharehistory
 bindkey -e
 
 # for changing color of the directories to normal which are also writable by group and others
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
+
+### using zinit plugin manager as plugins are not updated at aur
+source ~/.config/zsh/zinit.sh
 
 ### "fzf keybinding sourcing"
 source ~/.config/zsh/fzfkeybinding.zsh
@@ -18,15 +21,17 @@ source $HOME/.config/zsh/manpager.sh
 ### sourcing completion file
 source $HOME/.config/zsh/completion.sh
 
-#### sourcing gh completion file
-source $HOME/.config/zsh/ghcompletion.sh
+#### sourcing gh(github cli) completion file
+# source $HOME/.config/zsh/ghcompletion.sh
 
 ### Sourcing vi-mode file
 source $HOME/.config/zsh/vimode.sh
 
-# sourcing .Xresources at every start
-xrdb -load ~/.Xresources
+## sourcing .Xresources at every start (not needed now)
+# xrdb -load ~/.Xresources
 # xrdb -merge ~/.Xresources
 
 # Sourcing plugins at last
-source $HOME/.config/zsh/plugins.sh
+# source $HOME/.config/zsh/plugins.sh
+source $HOME/.config/zsh/shell_integrations.sh # loading plugins through zoxide at last
+source $HOME/.config/zsh/zinit_plugins.sh # loading plugins through zoxide at last

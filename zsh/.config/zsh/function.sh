@@ -58,6 +58,7 @@ par() {
 lt() {
 	leetcode l | fzf | awk -F'[][]' '{print $2}' | xargs leetcode e
 }
+
 ltl() {
 	leetcode l | fzf
 }

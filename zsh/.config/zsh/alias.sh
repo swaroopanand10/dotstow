@@ -2,8 +2,9 @@
 
 ## ls related
 alias ll='lsd -alh'
-alias ls='ls --color=auto'
+alias ls='ls --color'
 alias l='lsd -l' # show long listing but no hidden dotfiles except "."
+alias zi=__zoxide_zi "@"
 
 ## Tmux related
 alias mx='pgrep -vx tmux > /dev/null && \
@@ -102,6 +103,10 @@ alias vbk='cp $HOME/.config/vivaldi/Default/Preferences $HOME/.config/browser/vi
 alias vcp='mkdir -p ~/.config/vivaldi/Default/ && touch ~/.config/vivaldi/Default/Preferences'
 alias vrs='cat ${1} > $HOME/.config/vivaldi/Default/Preferences'
 alias V_reset='rm -rf .config/vivaldi .cache/vivaldi'
+
+## Firefox
+alias ffsn='cd ~/.mozilla/firefox/*.default-release/ && mkdir chrome && rsync -a -v --delete ~/dotstow/common/.config/browser/firefox/chrome/ ~/.mozilla/firefox/*.default-release/chrome' # this will create folder and will sync the css in firefox default-release folder with custom chrome folder should be used first time should be used first time.
+alias fsn='rsync -a -v --delete ~/dotstow/common/.config/browser/firefox/chrome/ ~/.mozilla/firefox/*.default-release/chrome' # this will sync the css in firefox default-release folder with custom chrome folder.
 
 ## Networking
 alias hta='nmcli device wifi hotspot ssid "swarooplatpot" password anand2002' # start hotspot with these config(will resave config)
