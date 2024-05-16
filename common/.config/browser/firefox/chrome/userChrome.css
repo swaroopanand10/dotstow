@@ -1,0 +1,36 @@
+#nav-bar {
+  background-color: #000000 !important;
+}
+
+.tab-background {
+  background-color: #000000 !important;
+}
+
+#TabsToolbar {
+  background-color: #000000 !important;
+}
+
+.tab-background[selected] {
+  background: #000 !important;
+  border: 1px solid rgb(160, 160, 255);
+  ;
+}
+
+#PersonalToolbar {
+  /* will target the place where bookmarks exists */
+  background-color: #000000 !important;
+  ;
+}
+
+#toolbar-menubar {
+  background-color: #000000 !important;
+}
+
+/* just removing some unnecessary things, but these things might break after some firefox update. */
+#firefox-view-button,#save-to-pocket-button,#fxa-toolbar-menu-button,#reader-mode-button{
+  display: none;
+}
+/* this represents the empty expandable space around url bar */
+/* #customizableui-special-spring1,#customizableui-special-spring2{ */
+/*   display: none; */
+/* } */

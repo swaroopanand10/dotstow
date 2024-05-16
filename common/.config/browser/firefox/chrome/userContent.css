@@ -1,0 +1,26 @@
+@-moz-document url(about:blank), url(about:newtab], url(about:home), url(about:privatebrowsing){
+body {
+  background-color: #000000 !important;
+}
+}
+
+/* in this rule the problem is that the link will change everytime so this rule won't work , that's why use the below one */
+/* @-moz-document url(moz-extension://edefd929-ed7f-4be5-b75f-e4f9a507a261/newtab.html#content){ */
+/* body { */
+/*   background-color: #000000 !important; */
+/* } */
+/* } */
+
+/* this will work all times  */
+@-moz-document url-prefix("moz-extension://") {
+  body {
+    background-color: #000000 !important;
+  }
+}
+
+/* theme was little bit off */
+/* @-moz-document url-prefix("about:") { */
+/*   body { */
+/*     background-color: #000000 !important; */
+/*   } */
+/* } */
