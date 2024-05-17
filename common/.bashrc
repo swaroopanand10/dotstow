@@ -53,7 +53,7 @@ source ~/.config/zsh/function.sh
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
-# PS1 customizations - 
+# PS1 customizations -
 PS1=" \[\e[1;32m\]\w \[\e[1;31m\]\[\e[0m\] "
 
 export VISUAL=nvim
@@ -62,6 +62,6 @@ export EDITOR="$VISUAL"
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
-# path variable for go
-export PATH=$PATH:/usr/local/go/bin
+# shell integrations
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
