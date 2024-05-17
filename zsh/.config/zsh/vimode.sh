@@ -31,14 +31,14 @@ echo -ne '\e[2 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[6 q' ;} # Use beam shape cursor for each new prompt.
 
 
-# Yank to the system clipboard while in vi-mode
-function vi-yank-xclip {
+# Yank to the system clipboard while in vi-mode(will work only in wayland)
+function vi-yank-wayland {
     zle vi-yank
    echo "$CUTBUFFER" | wl-copy
 }
 
-zle -N vi-yank-xclip
-bindkey -M vicmd 'y' vi-yank-xclip
+zle -N vi-yank-wayland
+bindkey -M vicmd 'y' vi-yank-wayland
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line

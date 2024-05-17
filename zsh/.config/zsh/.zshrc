@@ -27,11 +27,13 @@ source $HOME/.config/zsh/completion.sh
 ### Sourcing vi-mode file
 source $HOME/.config/zsh/vimode.sh
 
+### Sourcing shell integrations
+source $HOME/.config/zsh/shell_integrations.sh
+
+# source $HOME/.config/zsh/zinit_plugins.sh # loading plugins through zinit at last
+### Sourcing plugins at last
+# source $HOME/.config/zsh/plugins.sh
+
 ## sourcing .Xresources at every start (not needed now)
 # xrdb -load ~/.Xresources
 # xrdb -merge ~/.Xresources
-
-# Sourcing plugins at last
-# source $HOME/.config/zsh/plugins.sh
-source $HOME/.config/zsh/shell_integrations.sh # loading plugins through zoxide at last
-source $HOME/.config/zsh/zinit_plugins.sh # loading plugins through zoxide at last

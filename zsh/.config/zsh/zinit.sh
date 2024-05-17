@@ -10,8 +10,8 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Add in zsh plugins (will do in the end)
-# zinit light zsh-users/zsh-syntax-highlighting
-# zinit light zsh-users/zsh-completions
-# zinit light zsh-users/zsh-autosuggestions
-# zinit light Aloxaf/fzf-tab # (will load after compinit but before all others plugins as mentioned in doc)
+# Add in zsh plugins (don't know where to add, have to understand zinit docs) and loading here leads to little faster loading time
+zinit light Aloxaf/fzf-tab # (will load after compinit but before all others plugins as mentioned in doc)
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-syntax-highlighting
