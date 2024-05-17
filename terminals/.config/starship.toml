@@ -43,7 +43,8 @@ powershell_indicator = '_'
 zsh_indicator = ''
 # bash_indicator = "bsh"
 unknown_indicator = 'mystery shell'
-style = 'bold #ff0000'
+# style = 'bold #ff0000'
+style = 'bold #50FA7B'
 disabled = false
 
 [git_status]

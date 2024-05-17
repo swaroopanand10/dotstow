@@ -4,7 +4,6 @@
 alias ll='lsd -alh'
 alias ls='ls --color'
 alias l='lsd -l' # show long listing but no hidden dotfiles except "."
-alias zi=__zoxide_zi "@"
 
 ## Tmux related
 alias mx='pgrep -vx tmux > /dev/null && \
