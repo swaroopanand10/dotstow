@@ -44,3 +44,6 @@ bindkey -M vicmd 'y' vi-yank-wayland
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 bindkey -M vicmd '^e' edit-command-line # this is for enabling c-e in vi mode as well
+
+## very important It will help in using backspace after exiting vi mode
+bindkey -v '^?' backward-delete-char
