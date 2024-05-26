@@ -10,10 +10,10 @@ super + Return
 super + p
 	rofi -show drun
 
-super + 9
-	rofi -show window
+# super + 9
+# 	rofi -show window
 
-super + d 
+super + d
   dmenu_run
 
 # make sxhkd reload its configuration files:
@@ -21,8 +21,8 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # execute browsers
-alt + {f,b}
-  {firefox, brave}
+# alt + {f,b}
+#   {firefox, brave}
 
 # rofi greenclip clipboard manager
 alt + c
@@ -37,16 +37,16 @@ super + w
  ~/scripts/wifi/nmcli_rofi/nmcli_rofi.sh
 
 #rofi calculator
-super + 0
- rofi -show calc -modi calc -no-show-match -no-sort
+# super + 0
+#  rofi -show calc -modi calc -no-show-match -no-sort
 
-#Autostarting 
+#Autostarting
 # super + 3
 #   ~/scripts/autostart.sh
-  # ~/scripts/ncmpcpp.sh 
+  # ~/scripts/ncmpcpp.sh
  # bspc desktop -f 2 && brave & bspc desktop -f 10 && alacritty -e ncmpcpp & bspc desktop -f 1 && alacritty
- # bspc desktop -f 1 && alacritty && bspc desktop -f 2 && brave && bspc desktop -f 10 && alacritty -e ncmpcpp 
- # bspc desktop -f 1 && alacritty; bspc desktop -f 2 && brave; bspc desktop -f 10 && alacritty -e ncmpcpp 
+ # bspc desktop -f 1 && alacritty && bspc desktop -f 2 && brave && bspc desktop -f 10 && alacritty -e ncmpcpp
+ # bspc desktop -f 1 && alacritty; bspc desktop -f 2 && brave; bspc desktop -f 10 && alacritty -e ncmpcpp
 
 #
 # bspwm hotkeys
@@ -57,11 +57,11 @@ super + alt + {q,r}
 	bspc {quit,wm -r}
 
 #shutdown
-super + alt + p 
+super + alt + p
   poweroff
-   
+
 #reboot
-super + alt + o 
+super + alt + o
   reboot
 
 # close and kill
@@ -71,11 +71,11 @@ super + {_,shift + }q
 # 	bspc node -{k}
 
 #toggle the polybar
-# super + 1
-#  {polybar-msg cmd hide; bspc config -m focused top_padding 0, polybar-msg cmd show; bspc config -m focused top_padding 22}
-    # polybar-msg cmd hide && bspc config -m focused top_padding $((`bspc config -m focused top_padding` - 30 ))
-    # killall polybar && bspc config -m focused top_padding $((`bspc config -m focused top_padding` - 28 ))
-
+Alt + f
+  killall polybar
+ # {polybar-msg cmd hide; bspc config -m focused top_padding 0, polybar-msg cmd show; bspc config -m focused top_padding 22}
+ #    polybar-msg cmd hide && bspc config -m focused top_padding $((`bspc config -m focused top_padding` - 30 ))
+ #    killall polybar && bspc config -m focused top_padding $((`bspc config -m focused top_padding` - 28 ))
 # alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
@@ -89,7 +89,7 @@ super + g
 	bspc node -s biggest.window
 
 #
-# state/flags
+# state/flag
 #
 
 # set the window state
@@ -185,7 +185,7 @@ alt + p
 # XF86AudioMute
 #  amixer -q -D pulse sset Master toggle &
 
-alt + F9  
+alt + F9
  amixer -q -D pulse sset Master toggle &
 
 
@@ -195,13 +195,13 @@ alt + F9
 
 alt + {F10,F11}
  amixer -q -D pulse sset Master 10%{-,+} unmute &
- 
+
 
 alt + a
  mpc toggle
 
 # Sreen brightness control
-# XF86MonBrightnessUp 
+# XF86MonBrightnessUp
 #    xbacklight -inc 20 # increase screen brightness
 # XF86MonBrightnessDown
 #    xbacklight -dec 20 # decrease screen brightness

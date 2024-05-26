@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10 
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
 # CHANGING BORDER COLORS
 # normal_border_color
@@ -40,13 +40,13 @@ bspc config gapless_monocle      false
 # bspc rule -a Chromium desktop='^2'
 
 bspc config ignore_ewmh_focus true #helps in forcing focus=off in some applications
-bspc rule -a Brave-browser desktop='^2' follow=off 
+bspc rule -a Brave-browser desktop='^2' follow=off
 bspc rule -a Xournalpp desktop='^4' follow=off
 # bspc rule -a Alacritty desktop='^1'
 # bspc rule -a Alacritty -e ncmpcpp desktop='^10'
 # bspc rule -a "Alacritty:ncmpcpp" desktop='^9' follow=off
-# bspc rule -a ~/scripts/ncmpcpp.sh desktop='^8' 
-# bspc rule -a ~/scripts/mux.sh desktop='^1' 
+# bspc rule -a ~/scripts/ncmpcpp.sh desktop='^8'
+# bspc rule -a ~/scripts/mux.sh desktop='^1'
 
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
@@ -61,21 +61,21 @@ polybar -r example &
 nm-applet &
 
 # executing feh for background
-feh --bg-fill $HOME/Pictures/wallpapers/city_wallpapers/navy-blue-fluid-painting-d0x1q0mcxqzzzanx.jpg
+# feh --bg-fill $HOME/dotstow/wc/.config/hypr/navy-blue-fluid-painting-d0x1q0mcxqzzzanx.jpg
 
 #spawning the greenclip daemon
 greenclip daemon &
- 
+
 # touchegg
 touchegg &
- 
+
 # auto-cpufreq
 auto-cpufreq &
 
 # setting r rate(i copy pasted it here from .xprofile and deleted it from there)
 xset r rate 200 70
 
-# dunst 
+# dunst
 /usr/bin/dunst &
 
 #for setting the pointer
@@ -84,13 +84,13 @@ xset r rate 200 70
 # executing polkit gnome
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-#playerctl 
-# playerctld daemon 
+#playerctl
+# playerctld daemon
 
 #allowing mouse to change focus
 bspc config focus_follows_pointer true
 
-#bspswallow 
+#bspswallow
 # pgrep bspswallow || bspswallow &
 # pgrep ~/.config/bspwm/bspswallow/bspswallow || ~/.config/bspwm/bspswallow/bspswallow &
 pgrep ~/scripts/bspswallow/bspswallow || ~/scripts/bspswallow/bspswallow &
@@ -98,7 +98,7 @@ pgrep ~/scripts/bspswallow/bspswallow || ~/scripts/bspswallow/bspswallow &
 # another script for swallowing feature
 # ~/scripts/bspwmswallow.py DEBUG &
 
-# picom -b 
+# picom -b
 # picom &
 picom --transparent-clipping &
 # picom --experimental-backends --transparent-clipping &
