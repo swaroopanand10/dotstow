@@ -107,6 +107,10 @@ alias V_reset='rm -rf .config/vivaldi .cache/vivaldi'
 alias ffsn='cd ~/.mozilla/firefox/*.default-release/ && mkdir chrome && rsync -a -v --delete ~/dotstow/common/.config/browser/firefox/chrome/ ~/.mozilla/firefox/*.default-release/chrome' # this will create folder and will sync the css in firefox default-release folder with custom chrome folder should be used first time should be used first time.
 alias fsn='rsync -a -v --delete ~/dotstow/common/.config/browser/firefox/chrome/ ~/.mozilla/firefox/*.default-release/chrome' # this will sync the css in firefox default-release folder with custom chrome folder.
 
+## buku bookmarks
+alias fs='$HOME/dotstow/common/scripts/bookmarks/buku_firefox.sh'
+alias ts='$HOME/dotstow/common/scripts/bookmarks/buku_thorium.sh'
+
 ## Networking
 alias hta='nmcli device wifi hotspot ssid "swarooplatpot" password anand2002' # start hotspot with these config(will resave config)
 alias ht='nmcli con up Hotspot'                                               # for turning on hotspot with already saved hotspot config
