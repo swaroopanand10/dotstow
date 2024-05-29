@@ -9,7 +9,8 @@ hyprctl dispatch -- exec kitty mux
 hyprctl dispatch workspace 2
 # hyprctl dispatch -- exec thorium-browser --enable-features=UseOzonePlatform --ozone-platform=wayland
 # hyprctl dispatch -- exec google-chrome-stable -force-dark-mode --enable-features=UseOzonePlatform --ozone-platform=wayland
-hyprctl dispatch -- exec vivaldi -force-dark-mode --enable-features=UseOzonePlatform --ozone-platform=wayland
+# hyprctl dispatch -- exec vivaldi -force-dark-mode --enable-features=UseOzonePlatform --ozone-platform=wayland
+hyprctl dispatch -- exec firefox
 # hyprctl dispatch exec xournalpp
 
 # sleep 0.5

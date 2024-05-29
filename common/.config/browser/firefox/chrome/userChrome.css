@@ -30,6 +30,13 @@
 #firefox-view-button,#save-to-pocket-button,#fxa-toolbar-menu-button,#reader-mode-button{
   display: none;
 }
+
+#tabbrowser-tabs{ /* will remove the border,padding and margin on top left */
+  border-inline-start: none !important;
+  padding-inline-start: none !important;
+  margin-inline-start: none !important;
+}
+
 /* this represents the empty expandable space around url bar */
 /* #customizableui-special-spring1,#customizableui-special-spring2{ */
 /*   display: none; */
