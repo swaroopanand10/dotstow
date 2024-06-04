@@ -5,7 +5,7 @@ hyprctl keyword windowrule "workspace 1 silent,^(kitty)$"
 # hyprctl keyword windowrule "workspace 4,silent, ^(xournalpp)$"
 # sleep 1
 
-hyprctl dispatch -- exec kitty tmux-nr
+hyprctl dispatch -- exec kitty mxnr
 hyprctl dispatch workspace 2
 # hyprctl dispatch -- exec thorium-browser --enable-features=UseOzonePlatform --ozone-platform=wayland
 # hyprctl dispatch -- exec google-chrome-stable -force-dark-mode --enable-features=UseOzonePlatform --ozone-platform=wayland
