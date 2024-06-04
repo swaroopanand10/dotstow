@@ -42,7 +42,7 @@ export ACLOCAL_FLAGS="-I $INSTALL_PREFIX/share/aclocal $ACLOCAL_FLAGS"
 PATH=/usr/bin/:$PATH
 
 # PATH=${PATH}:$(find $HOME/scripts/ -type d -printf ":%p")
-PATH=$PATH:$HOME/scripts/tmux-r/
+PATH=$PATH:$HOME/scripts/tmux/
 
 # path variable for go
 export PATH=$PATH:/usr/local/go/bin

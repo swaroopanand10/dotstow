@@ -6,11 +6,11 @@ alias ls='ls --color'
 alias l='lsd -l' # show long listing but no hidden dotfiles except "."
 
 ## Tmux related
-alias mx='pgrep -vx tmux > /dev/null && \
-		tmux new -d -s delete-me && \
-		tmux run-shell /usr/share/tmux-resurrect/scripts/restore.sh && \
-		tmux kill-session -t delete-me && \
-		tmux attach || tmux attach'
+# alias mx='pgrep -vx tmux > /dev/null && \
+# 		tmux new -d -s delete-me && \
+# 		tmux run-shell /usr/share/tmux-resurrect/scripts/restore.sh && \
+# 		tmux kill-session -t delete-me && \
+# 		tmux attach || tmux attach'
 alias ms='tmux-sessionizer'
 alias tms='tmux source-file ~/.config/tmux/tmux.conf'
 alias tmk='tmux kill-server'
