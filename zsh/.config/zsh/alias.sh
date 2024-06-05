@@ -65,11 +65,8 @@ alias pi='kitty icat'
 ## Nvim
 alias sv='sudoedit'
 alias v='nvim'
-alias dv='NVIM_APPNAME=lazyvimd nvim'
 alias lv='NVIM_APPNAME=lazyvim nvim'
 alias nv='NVIM_APPNAME=custom nvim'
-alias nvk='NVIM_APPNAME=nvim2k nvim'
-alias kcv='NVIM_APPNAME=kickstart nvim'
 alias kv='$HOME/repos/neovim/bin/nvim'
 
 ## Stow
