@@ -7,3 +7,9 @@
 ## "nvim" as manpager
 # export MANPAGER=nvimpager
 export MANPAGER='nvim +Man!'
+
+# man() {
+#     local width=$(tput cols)
+#     [ $width -gt $MANWIDTH ] && width=$MANWIDTH
+#     env MANWIDTH=$width man "$@"
+# }

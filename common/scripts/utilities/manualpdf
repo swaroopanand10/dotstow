@@ -1,2 +1,2 @@
-#! bin/sh
-man -k . | rofi -dmenu -p "Run:" -sort | awk '{print $1}' | xargs -r man -Tpdf | zathura -
+#!/usr/bin/env bash
+man -k . | fzf | awk '{print $2} {print $1}' | sed -e 's/(//' -e 's/)//' | tr '\n' ' '| xargs -r man -Tpdf | zathura -

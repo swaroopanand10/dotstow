@@ -50,6 +50,10 @@ alias pa='playerctl --list-all | xargs -L1 playerctl pause -p' # will pause all 
 alias cl='clear'
 alias sb='swaybg -c "#000000"'
 alias pi='kitty icat'
+
+## Man pages related
+alias md='$HOME/scripts/utilities/manualpdf'
+alias mm='MANWIDTH=100 man'
 # alias play='mpv --audio-file=<(yt-dlp '$0' -o -) <(yt-dlp '$0' -o -)'
 
 # ## Emacs
@@ -67,6 +71,7 @@ alias sv='sudoedit'
 alias v='nvim'
 alias lv='NVIM_APPNAME=lazyvim nvim'
 alias nv='NVIM_APPNAME=custom nvim'
+alias dv='NVIM_APPNAME=basic nvim'
 alias kv='$HOME/repos/neovim/bin/nvim'
 
 ## Stow
