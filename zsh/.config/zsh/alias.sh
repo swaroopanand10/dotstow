@@ -14,6 +14,7 @@ alias l='lsd -l' # show long listing but no hidden dotfiles except "."
 alias ms='tmux-sessionizer'
 alias tms='tmux source-file ~/.config/tmux/tmux.conf'
 alias tmk='tmux kill-server'
+alias mx='~/scripts/tmux/mxnr'
 # alias mux='pgrep -vxq tmux && tmux new -d -s delete-me && tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && tmux kill-session -t delete-me && tmux attach || tmux attach'
 
 ## Youtube related
@@ -50,6 +51,7 @@ alias pa='playerctl --list-all | xargs -L1 playerctl pause -p' # will pause all 
 alias cl='clear'
 alias sb='swaybg -c "#000000"'
 alias pi='kitty icat'
+alias zr='~/dotstow/common/scripts/utilities/zoxide_remove_deleted.sh'
 
 ## Man pages related
 alias md='$HOME/scripts/utilities/manualpdf'

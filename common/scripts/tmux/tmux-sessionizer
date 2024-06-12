@@ -16,6 +16,11 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
+# This part sets the session name with appended 1, incase if the name is already in use, but this method still has lot of flaws.
+# if tmux has-session -t=$selected_name 2>/dev/null; then
+#   selected_name="${selected_name}1"
+# fi
+
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
 	tmux new-session -s $selected_name -c $selected
 	exit 0
