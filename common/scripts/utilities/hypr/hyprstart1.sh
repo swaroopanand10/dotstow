@@ -6,12 +6,12 @@
 [ ! -s ~/.config/mpd/pid ] && mpd
 mpd >/dev/null 2>&1 &
 
-nm-applet --indicator &
+# nm-applet --indicator &
 
-cd ~
+# cd ~
 
 # Log WLR errors and logs to the hyprland log. Recommended
-# export HYPRLAND_LOG_WLR=1
+export HYPRLAND_LOG_WLR=1
 
 # Tell XWayland to use a cursor theme
 export XCURSOR_THEME=Bibata-Modern-Classic
