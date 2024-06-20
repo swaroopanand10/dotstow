@@ -29,9 +29,8 @@ alt + c
   rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # execute file manager
-# super + 2
-#   nemo
- # thunar
+super + backslash
+  nemo
 
 #rofi calculator
 # super + 0
@@ -67,13 +66,6 @@ super + {_,shift + }q
 # super + q
 # 	bspc node -{k}
 
-#toggle the polybar
-super + period
- {polybar-msg cmd hide; bspc config -m focused top_padding 0, polybar-msg cmd show; bspc config -m focused top_padding 22}
-  # killall polybar
- #    polybar-msg cmd hide && bspc config -m focused top_padding $((`bspc config -m focused top_padding` - 30 ))
- #    killall polybar && bspc config -m focused top_padding $((`bspc config -m focused top_padding` - 28 ))
-
 # alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
@@ -91,7 +83,7 @@ super + g
 #
 
 # set the window state
-super + {e,shift + t,s,f}
+super + {s,shift + t,space,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
@@ -169,9 +161,10 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + ctrl + {h,j,k,l}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+#
+## volume and media controls
+#
 
-
-# volume and media controls
 alt + shift + minus
   ~/dotstow/common/scripts/notification/volume/volume.sh down
 
@@ -190,10 +183,16 @@ alt + p
 alt + a
   mpc toggle
 
+alt + Tab
+  playerctl play-pause
+
 # XF86Audio{Play,Prev,Next,Stop}
  # ~/bin/mediacontrolkeys.sh {PlayPause,Previous,Next,Stop} &
 
+#
 ## Brighness control
+#
+
 alt + bracketright
    ~/scripts/notification/brightness/bright.sh up
    # xbacklight -inc 20 # increase screen brightness
@@ -205,7 +204,35 @@ alt + bracketleft
 CapsLock
   ~/scripts/notification/capslock.sh
 
-#lock screen
+# toggle the polybar
+super + period
+ {polybar-msg cmd hide; bspc config -m focused top_padding 0, polybar-msg cmd show; bspc config -m focused top_padding 22}
+ #    polybar-msg cmd hide && bspc config -m focused top_padding $((`bspc config -m focused top_padding` - 30 ))
+ #    killall polybar && bspc config -m focused top_padding $((`bspc config -m focused top_padding` - 28 ))
+
+# Clear all notifications
+super + shift + slash
+  dunstctl close all
+
+# Display date and time
+super + e
+  $HOME/scripts/notification/date.sh
+
+# launch kitty with tmux
+super + t
+  kitty mxnr
+
+# Scratchpads
+super + comma
+  $HOME/dotstow/common/scripts/bspwm/scratchpads/normal_terminal.sh
+
+super + slash
+  $HOME/dotstow/common/scripts/bspwm/scratchpads/btm.sh
+
+alt + minus
+  $HOME/dotstow/common/scripts/bspwm/scratchpads/ncmpcpp.sh
+
+# lock screen
 super + x
 	betterlockscreen -l dimblur
 

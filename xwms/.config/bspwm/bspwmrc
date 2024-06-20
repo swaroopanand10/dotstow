@@ -24,11 +24,6 @@ bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 bspc config focused_border_color "#999999"
 bspc config active_border_color "#999999"
 
-# picom
-# picom &
-# picom --experimental-backends --transparent-clipping &#helps in clean monocle and fullscreen mode
-
-
 #styling
 bspc config border_width         1
 bspc config window_gap          10
@@ -44,13 +39,6 @@ bspc config gapless_monocle      false
 # bspc rule -a Chromium desktop='^2'
 
 bspc config ignore_ewmh_focus true #helps in forcing focus=off in some applications
-bspc rule -a Brave-browser desktop='^2' follow=off
-bspc rule -a Xournalpp desktop='^4' follow=off
-# bspc rule -a Alacritty desktop='^1'
-# bspc rule -a Alacritty -e ncmpcpp desktop='^10'
-# bspc rule -a "Alacritty:ncmpcpp" desktop='^9' follow=off
-# bspc rule -a ~/scripts/ncmpcpp.sh desktop='^8'
-# bspc rule -a ~/scripts/mux.sh desktop='^1'
 
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
@@ -94,7 +82,7 @@ xset r rate 200 70
 #allowing mouse to change focus
 bspc config focus_follows_pointer true
 
-#bspswallow
+# bspswallow
 # pgrep bspswallow || bspswallow &
 # pgrep ~/.config/bspwm/bspswallow/bspswallow || ~/.config/bspwm/bspswallow/bspswallow &
 pgrep ~/scripts/bspswallow/bspswallow || ~/scripts/bspswallow/bspswallow &
@@ -104,10 +92,15 @@ pgrep ~/scripts/bspswallow/bspswallow || ~/scripts/bspswallow/bspswallow &
 
 # picom -b
 # picom &
-picom --transparent-clipping &
+# picom --transparent-clipping &
 # picom --experimental-backends --transparent-clipping &
 
 
-#starting mpd
+# starting mpd
 [ ! -s ~/.config/mpd/pid ] && mpd
-mpd >/dev/null 2>&1 &
+# mpd >/dev/null 2>&1 &
+
+# rules for scratchpads
+bspc rule -a normal_terminal_scpad sticky=on state=floating rectangle=1850x1020+32+32
+bspc rule -a ncmpcpp_scpad sticky=on state=floating rectangle=1850x1020+32+32
+bspc rule -a btm_scpad sticky=on state=floating rectangle=1850x1020+32+32
