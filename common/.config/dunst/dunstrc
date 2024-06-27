@@ -38,7 +38,7 @@
     #icon_path = /usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papirus-Dark/16x16/devices/:/usr/share/icons/Papirus-Dark/16x16/actions/:/usr/share/icons/Papirus-Dark/16x16/animations/:/usr/share/icons/Papirus-Dark/16x16/apps/:/usr/share/icons/Papirus-Dark/16x16/categories/:/usr/share/icons/Papirus-Dark/16x16/emblems/:/usr/share/icons/Papirus-Dark/16x16/emotes/:/usr/share/icons/Papirus-Dark/16x16/devices/mimetypes:/usr/share/icons/Papirus-Dark/16x16/panel/:/usr/share/icons/Papirus-Dark/16x16/places/
     icon_path = ~/.local/share/icons/Adwaita/16x16/devices/:~/.local/share/icons/Adwaita/16x16/status/:~/.local/share/icons/Adwaita/16x16/apps/:/usr/share/icons/Qogir/16/status:/usr/share/icons/Qogir/16/devices/:/usr/share/icons/Qogir/16/apps/:/usr/share/pixmaps/
 
-    dmenu = /usr/bin/wofi -p dunst:
+    dmenu = /usr/bin/rofi-wayland -p dunst:
     browser = /usr/bin/firefox --new-tab
 
     title = Dunst
@@ -48,14 +48,14 @@
     timeout = 5
 
 [urgency_low]
-    background = "#1E1E2E"
-    foreground = "#CDD6F4"
+    background = "#000000"
+    foreground = "#ffffff"
 
 [urgency_normal]
-    background = "#1E1E2E"
-    foreground = "#CDD6F4"
+    background = "#000000"
+    foreground = "#ffffff"
 
 [urgency_critical]
-    background = "#1E1E2E"
-    foreground = "#CDD6F4"
-    frame_color = "#FAB387"
+    background = "#000000"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
