@@ -1,92 +1,65 @@
 #!/bin/bash
 
+# This script uses wpctl (wireplumber utility) for pausing and playing
+
 # You can call this script like this:
 # $./volume.sh up
 # $./volume.sh down
 # $./volume.sh mute
+# $./volume.sh minimal
 
 function get_volume {
-	pamixer --get-volume
+	wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2*100}'
 }
 
 function is_mute {
-	pamixer --get-mute
+	# pamixer --get-mute
+	wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}' # this will return '[muted]' on mute and nothing on unmute
 }
 
 function send_notification {
-	DIR=$(dirname "$0")
 	volume=$(get_volume)
 	bool_mute=$(is_mute)
-	if [ $bool_mute = "true" ]; then
-		DIR=$(dirname "$0")
-		$DIR/notify-send.sh -i "/usr/share/icons/Faba/48x48/notifications/notification-audio-volume-muted.svg" --replace=555 -u normal "Mute" -t 2000
+	if [ "$bool_mute" = "[MUTED]" ]; then
+		notify-send --replace-id=555 -u normal " Mute" -t 2000
 	else
-		if [ "$volume" = 0 ]; then
-			icon_name="/usr/share/icons/Faba/48x48/notifications/notification-audio-volume-muted.svg"
-			$DIR/notify-send.sh "$volume" -i "$icon_name" -t 2000 -h int:value:"$volume" -h string:synchronous:"─" --replace=555
-		else
-			if [ "$volume" -lt "10" ]; then
-				icon_name="/usr/share/icons/Faba/48x48/notifications/notification-audio-volume-low.svg"
-			else
-				if [ "$volume" -lt "30" ]; then
-					icon_name="/usr/share/icons/Faba/48x48/notifications/notification-audio-volume-low.svg"
-				else
-					if [ "$volume" -lt "70" ]; then
-						icon_name="/usr/share/icons/Faba/48x48/notifications/notification-audio-volume-medium.svg"
-					else
-						icon_name="/usr/share/icons/Faba/48x48/notifications/notification-audio-volume-high.svg"
-					fi
-				fi
-			fi
-		fi
+		notify-send -t 2000 "$volume%" -h int:value:"$volume" --replace-id=555
 	fi
-	## only send volume notfication if unmuted other wise send mute notification
-	if [ $bool_mute = "false" ]; then
-		bar=$(seq -s " " $(($volume)) | sed 's/[0-9]//g')
-		# Send the notification
-		$DIR/notify-send.sh "$volume" "$bar" -i "$icon_name" -t 2000 -h int:value:"$volume" -h string:synchronous:"$bar" --replace=555
-	fi
-
 }
 
 case $1 in
 up)
-	# Set the volume on (if it was muted)
-	# pamixer -u
-	# Up the volume (+ 5%)
 	volume=$(get_volume)
 	bool_mute=$(is_mute)
 
-	if [ "$volume" -lt "65" ]; then
-		if [ $bool_mute = "false" ]; then
-			pamixer -i 5
-		fi
-		send_notification
+	# if [ "$volume" -lt "65" ]; then # don't need it since wpctl has the builtin limiter in the cli command
+	if [ "$bool_mute" != "[MUTED]" ]; then
+		wpctl set-volume -l 0.5 @DEFAULT_AUDIO_SINK@ 5%+
 	fi
+	send_notification
+	# fi
 	;;
 down)
 	bool_mute=$(is_mute)
-	if [ $bool_mute = "false" ]; then
-		pamixer -d 5
+	if [ "$bool_mute" != "[MUTED]" ]; then
+		wpctl set-volume -l 0.5 @DEFAULT_AUDIO_SINK@ 5%-
 	fi
 	send_notification
 	;;
 mute)
-	# Toggle mute
-	pamixer -t
-	pamixer --set-volume 0
+	wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle # toggle mute
 	bool_mute=$(is_mute)
-	if [ $bool_mute = "true" ]; then
-		DIR=$(dirname "$0")
-		$DIR/notify-send.sh -i "/usr/share/icons/Faba/48x48/notifications/notification-audio-volume-muted.svg" --replace=555 -u normal "Mute" -t 2000
+	if [ "$bool_mute" == "[MUTED]" ]; then
+		send_notification
+		wpctl set-volume -l 0.5 @DEFAULT_AUDIO_SINK@ 0% # when muting - set the volume to 0
 	else
 		send_notification
 	fi
 	;;
 minimal) ## to set the volume at 30 instantly
 	bool_mute=$(is_mute)
-	if [ $bool_mute = "false" ]; then
-		pamixer --set-volume 30
+	if [ "$bool_mute" != "[MUTED]" ]; then
+		wpctl set-volume -l 0.5 @DEFAULT_AUDIO_SINK@ 30%
 	fi
 	send_notification
 	;;
