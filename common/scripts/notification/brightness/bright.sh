@@ -10,7 +10,7 @@ function get_brightness {
 
 function send_notification {
 	brightness=$(get_brightness)
-	notify-send -t 2000 "$brightness%" -h int:value:"$brightness" --replace-id=555
+	notify-send -t 2000 "$brightness% 󰃠 " -h int:value:"$brightness" --replace-id=555
 }
 
 case $1 in

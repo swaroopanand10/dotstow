@@ -21,9 +21,9 @@ function send_notification {
 	volume=$(get_volume)
 	bool_mute=$(is_mute)
 	if [ "$bool_mute" = "[MUTED]" ]; then
-		notify-send --replace-id=555 -u normal " Mute" -t 2000
+		notify-send --replace-id=555 -u critical "        Muted  " -t 2000 -h string:fgcolor:#ff0000
 	else
-		notify-send -t 2000 "$volume%" -h int:value:"$volume" --replace-id=555
+		notify-send -t 2000 "$volume%  " -h int:value:"$volume" --replace-id=555
 	fi
 }
 
