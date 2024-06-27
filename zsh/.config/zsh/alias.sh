@@ -51,7 +51,10 @@ alias pa='playerctl --list-all | xargs -L1 playerctl pause -p' # will pause all 
 alias cl='clear'
 alias sb='swaybg -c "#000000"'
 alias pi='kitty icat'
+
+## Zoxide
 alias zr='~/dotstow/common/scripts/utilities/zoxide_remove_deleted.sh'
+alias zo='zoxide add .'
 
 ## Man pages related
 alias md='$HOME/scripts/utilities/manualpdf'

@@ -55,6 +55,10 @@ par() {
 	paru -Slq | fzf --layout=reverse -m --preview 'bat <(paru -Si {1}) <(paru -Fl {1} | awk "{print \$2}")' | xargs -ro paru -S
 }
 
+wrk() {
+  pomo start -p "${1:-1}" -d 1h "ss"
+}
+
 lt() {
 	leetcode l | fzf | awk -F'[][]' '{print $2}' | xargs leetcode e
 }
