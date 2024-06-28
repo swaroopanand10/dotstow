@@ -36,7 +36,7 @@ alias ffa='yazi_cd'
 
 ## Others
 alias ncm='ncmpcpp'
-alias refmpd='rm -rf ~/dotstow/media/.config/mpd/{database,state,pid,sticker.sql} && touch ~/dotstow/media/.config/mpd/database'
+alias refmpd='rm -rf ~/.config/mpd/{database,state,pid,sticker.sql} && touch ~/.config/mpd/database'
 alias grp='grep --color=always -n'
 alias grpp='grep --color=always -n -P'
 alias cgrp='grep --color=always -i -n'
@@ -53,8 +53,10 @@ alias sb='swaybg -c "#000000"'
 alias pi='kitty icat'
 
 ## Zoxide
-alias zr='~/dotstow/common/scripts/utilities/zoxide_remove_deleted.sh'
+alias zr='~/scripts/utilities/zoxide_remove_deleted.sh'
 alias zo='zoxide add .'
+alias zd='zoxide delete .'
+# alias ze='zoxide edit'
 
 ## Man pages related
 alias md='$HOME/scripts/utilities/manualpdf'
@@ -105,18 +107,17 @@ alias gsw='git switch'
 alias lg='lazygit'
 
 ## Vivaldi preferences saving
-alias vbk='cp $HOME/.config/vivaldi/Default/Preferences $HOME/.config/browser/vivaldi/preferences/Prefernces_$(date +"%Y-%m-%d_%H:%M:%S")'
-alias vcp='mkdir -p ~/.config/vivaldi/Default/ && touch ~/.config/vivaldi/Default/Preferences'
-alias vrs='cat ${1} > $HOME/.config/vivaldi/Default/Preferences'
-alias V_reset='rm -rf .config/vivaldi .cache/vivaldi'
+# alias vbk='cp $HOME/.config/vivaldi/Default/Preferences $HOME/.config/browser/vivaldi/preferences/Prefernces_$(date +"%Y-%m-%d_%H:%M:%S")'
+# alias vcp='mkdir -p ~/.config/vivaldi/Default/ && touch ~/.config/vivaldi/Default/Preferences'
+# alias vrs='cat ${1} > $HOME/.config/vivaldi/Default/Preferences'
+# alias V_reset='rm -rf .config/vivaldi .cache/vivaldi'
 
 ## Firefox
-alias ffsn='cd ~/.mozilla/firefox/*.default-release/ && mkdir chrome && rsync -a -v --delete ~/dotstow/common/.config/browser/firefox/chrome/ ~/.mozilla/firefox/*.default-release/chrome' # this will create folder and will sync the css in firefox default-release folder with custom chrome folder should be used first time should be used first time.
-alias fsn='rsync -a -v --delete ~/dotstow/common/.config/browser/firefox/chrome/ ~/.mozilla/firefox/*.default-release/chrome' # this will sync the css in firefox default-release folder with custom chrome folder.
+alias fsn='$HOME/scripts/firefox/backup_restore.sh'
 
 ## buku bookmarks
-alias fs='$HOME/dotstow/common/scripts/bookmarks/buku_firefox.sh'
-alias ts='$HOME/dotstow/common/scripts/bookmarks/buku_thorium.sh'
+# alias fs='$HOME/dotstow/common/scripts/bookmarks/buku_firefox.sh'
+# alias ts='$HOME/dotstow/common/scripts/bookmarks/buku_thorium.sh'
 
 ## Networking
 alias hta='nmcli device wifi hotspot ssid "swarooplatpot" password anand2002' # start hotspot with these config(will resave config)
