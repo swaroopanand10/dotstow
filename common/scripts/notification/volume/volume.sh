@@ -13,7 +13,6 @@ function get_volume {
 }
 
 function is_mute {
-	# pamixer --get-mute
 	wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}' # this will return '[muted]' on mute and nothing on unmute
 }
 
