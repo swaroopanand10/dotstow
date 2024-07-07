@@ -10,3 +10,4 @@ common/.config/cgdb/logs
 terminals/.config/tmux/plugins
 common/.config/lazygit/state.yml
 common/.config/btop/btop.log
+common/.local/share/godot/app_userdata/Lorien/logs
