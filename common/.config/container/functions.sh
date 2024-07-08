@@ -66,4 +66,3 @@ _installPackagesYay() {
     printf "AUR packags not installed:\n%s\n" "${toInstall[@]}";
     yay --noconfirm -S "${toInstall[@]}";
 }
-

@@ -142,6 +142,11 @@ alias dse='distrobox-enter'
 alias dsl='distrobox list'
 alias dss='distrobox stop'
 
+## Toolbox
+alias txc='$HOME/.config/container/toolbox_arch.sh'
+alias te='toolbox enter'
+alias txl='toolbox list'
+
 ## GCC compiler flag aliases
 # for c++
 alias cps="g++ -ggdb -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion"
