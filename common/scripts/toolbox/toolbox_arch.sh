@@ -8,6 +8,6 @@ toolbox run --container "$1" sudo reflector --country 'India' --score 5 --sort r
 
 toolbox run --container "$1" sudo pacman -Syu --noconfirm
 
-toolbox run --container "$1" bash -e "$HOME/.config/container/yay_install.sh"
+toolbox run --container "$1" bash -e "$HOME/scripts/toolbox/yay_install.sh"
 
-toolbox run --container "$1" bash -e "$HOME/.config/container/install_pack.sh"
+toolbox run --container "$1" bash -e "$HOME/scripts/toolbox/install_pack.sh"

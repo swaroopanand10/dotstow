@@ -1,11 +1,11 @@
 #!/bin/bash
-packagesParu=(
+packagesYay=(
 
 	## Zsh packages
 	"zsh"
 
 	## Terminals
-	"kitty"
+	"kitty-terminfo"
 
 	## Functionality packages
 	"ripgrep"
@@ -19,6 +19,7 @@ packagesParu=(
 	"tree"
 	"imv"
   "glibc-locales"
+  "wl-clipboard"
 
 	## Fonts
 	"ttf-jetbrains-mono-nerd"
@@ -26,9 +27,9 @@ packagesParu=(
 	"ttf-nerd-fonts-symbols"
 
 	## Others
-	"chafa"
-	"ffmpegthumbnailer"
-	"imagemagick"
+	# "chafa"
+	# "ffmpegthumbnailer"
+	# "imagemagick"
 
 	## Resource manager
 	"htop"
@@ -44,7 +45,7 @@ packagesParu=(
 	"nodejs"
 	"npm"
 	"gdb"
-	"cgdb"
+	# "cgdb"
 	"go"
 	"cmake"
 	"clang"

@@ -87,11 +87,11 @@ alias sta='cd ~/dotstow/ && stow */ -t ~ --adopt'
 alias st='cd ~/dotstow/ && stow * -t ~'
 
 ## Package searching
-alias pke='paru -Q | fzf'  # searching all packages
-alias pki='paru -Qe | fzf' # searching installed package
-alias pkn='paru -Qn | fzf' # searching only normal package
-alias pkr='paru -Qm | fzf' # searching only aur package
-alias refc='sudo reflector --country "India,United States," --latest 100 --age 12 --fastest 8 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias pke='yay -Q | fzf'  # searching all packages
+alias pki='yay -Qe | fzf' # searching installed package
+alias pkn='yay -Qn | fzf' # searching only normal package
+alias pkr='yay -Qm | fzf' # searching only aur package
+alias refc='sudo reflector --country "India" --score 5 --sort rate --protocol http,https --save /etc/pacman.d/mirrorlist'
 alias mirrbak='sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist_$(date +"%Y-%m-%d_%H:%M:%S")'
 alias ref='sudo reflector --latest 100 --fastest 8 --protocol https --age 12 --sort rate --save /etc/pacman.d/mirrorlist'
 
@@ -146,7 +146,7 @@ alias dsl='distrobox list'
 alias dss='distrobox stop'
 
 ## Toolbox
-alias txc='$HOME/.config/container/toolbox_arch.sh'
+alias txc='~/scripts/toolbox/toolbox_arch.sh'
 alias te='toolbox enter'
 alias txl='toolbox list'
 

@@ -14,15 +14,8 @@ else
     # [ -d "$HOME/yay-git" ] || git clone https://aur.archlinux.org/yay-git.git ~/yay-git # this will be slow so just install binary
     [ -d "$HOME/yay-bin" ] || git clone https://aur.archlinux.org/yay-bin.git ~/yay-bin
     cd ~/yay-bin || exit
-    makepkg -si
+    yes | makepkg -si
     cd "$temp_path" || exit
     echo "yay has been installed successfully."
 fi
 echo ""
-
-## Then Install paru binary through yay(fast)
-if sudo pacman -Qs paru > /dev/null ; then
-    echo "paru is already installed!"
-else
-yay -S paru-bin --noconfirm
-fi
