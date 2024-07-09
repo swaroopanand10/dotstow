@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+###### the tty might not fit properly, so run the command - 'stty cols 145 rows 45'
+
 # cp /usr/share/edk2/x64/OVMF_VARS.4m.fd /tmp/my_vars.bin # for uefi
 # export SDL_VIDEO_X11_DGAMOUSE=0
 
