@@ -106,6 +106,9 @@ alias gd='git diff'
 alias gsw='git switch'
 alias lg='lazygit'
 
+## VM based
+alias vma='~/scripts/vm/vm.sh'
+
 ## Vivaldi preferences saving
 # alias vbk='cp $HOME/.config/vivaldi/Default/Preferences $HOME/.config/browser/vivaldi/preferences/Prefernces_$(date +"%Y-%m-%d_%H:%M:%S")'
 # alias vcp='mkdir -p ~/.config/vivaldi/Default/ && touch ~/.config/vivaldi/Default/Preferences'
