@@ -44,7 +44,7 @@ fkill() { # to kill a process using fzf
 # Using fzf for installing and finding packages
 # note: first run this "sudo pacman -Fy" # <- only run this once
 pac() {
-	pacman -Slq | fzf --layout=reverse -m --preview 'bat <(pac man -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S
+	pacman -Slq | fzf --layout=reverse -m --preview 'bat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S
 }
 
 aur() {
@@ -55,6 +55,7 @@ par() {
 	paru -Slq | fzf --layout=reverse -m --preview 'bat <(paru -Si {1}) <(paru -Fl {1} | awk "{print \$2}")' | xargs -ro paru -S
 }
 
+# Run `pomo init` once after new installation before running this
 wrk() {
   pomo start -p "${1:-1}" -d 1h "ss"
 }

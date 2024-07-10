@@ -13,8 +13,8 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 bind 'set completion-ignore-case on' # for case insensitive tab completion
 
 ### setting up fzf-tab-completion for bash
-source /usr/share/fzf-tab-completion/bash/fzf-bash-completion.sh
-bind -x '"\t": fzf_bash_completion'
+# source /home/swaroop/.local/plugins/bash_plugins/fzf-tab-completion/bash/fzf-bash-completion.sh
+# bind -x '"\t": fzf_bash_completion'
 
 # ShowInstallerIsoInfo() {
 #     local file=/usr/lib/endeavouros-release

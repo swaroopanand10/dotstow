@@ -67,7 +67,7 @@
 
   "custom/power_btn": {
     "format": "",
-    "on-click": "wlogout -b 4"
+    "on-click": "wlogout"
   },
   "custom/screen-rec": {
 		"format": "",
