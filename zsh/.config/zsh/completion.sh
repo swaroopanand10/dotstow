@@ -2,7 +2,7 @@
 # compinit has something to do with completions
 
 # zstyle :compinstall filename '$ZDOTDIR/.zshrc' # don't know what it does
-autoload -Uz compinit && compinit              # it loads completion and is necessary
+autoload -Uz compinit && compinit # it loads completion and is necessary
 # zinit cdreplay -q                              # recommended by zinit to cache completions
 # zmodload zsh/complist                          # if this is removed then the menuselect keybinds will not work
 
@@ -10,7 +10,7 @@ _comp_options+=(globdots) # include hidden files in completion menu as well
 
 ### Completion customization.
 # autocompletion with case-insensivity
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'          # this will allow to match capital letters and small letters with each other
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # this will allow to match capital letters and small letters with each other
 # zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' # this will show preview in 'cd' tab completion with colors in the preview
 # zstyle ':completion:*' menu select                                 # don't now what it does
 # zstyle ':completion:*' menu no                                     # disables default zsh completion menu (don't know why use this)
