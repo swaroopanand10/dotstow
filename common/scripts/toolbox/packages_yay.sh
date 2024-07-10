@@ -22,31 +22,31 @@ packagesYay=(
   "wl-clipboard"
 
 	## Fonts
-	"ttf-jetbrains-mono-nerd"
-	"ttf-fira-code"
-	"ttf-nerd-fonts-symbols"
+	# "ttf-fira-code"
+	# "ttf-nerd-fonts-symbols"
 
 	## Others
+  "imagemagick" # (required for image.nvim )
 	# "chafa"
-	# "ffmpegthumbnailer"
-	# "imagemagick"
 
 	## Resource manager
-	"htop"
-	"bottom"
-	"strace"
+	# "strace"
 
 	## Filemanagers
-	"lf"
-	"ctpv"
+  # "yazi"
+  # "poppler" # (for pdf previews with yazi)
+  # "ffmpegthumbnailer" # (video thumbnail previews for yazi)
+	# "lf"
+	# "ctpv"
 
 	## language specific packages
-	"python"
-	"nodejs"
-	"npm"
-	"gdb"
+	# "go"
+	# "python"
+	# "python-pip"
+	"nodejs" # required for some lsp packages
+	# "npm"
+  # "luarocks"
+
+	# "gdb"
 	# "cgdb"
-	"go"
-	"cmake"
-	"clang"
 )
