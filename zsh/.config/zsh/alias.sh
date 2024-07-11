@@ -1,5 +1,8 @@
 #### Aliases
 
+## for reloading zsh
+alias reld='source ~/.config/zsh/.zshrc'
+
 ## ls related
 alias ll='lsd -alh'
 alias ls='ls --color'
@@ -99,10 +102,13 @@ alias ref='sudo reflector --latest 100 --fastest 8 --protocol https --age 12 --s
 alias gcl='git clone'
 alias gcm='git commit -m'
 alias ga='git add'
+alias gaa='git add -A'
 alias gp='git push'
 alias gs='git status'
 alias gl='git log'
 alias gd='git diff'
+alias grs='git restore'
+alias grsa='git restore --staged'
 alias gsw='git switch'
 alias lg='lazygit'
 
@@ -158,7 +164,7 @@ alias cpvs="g++ -ggdb -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsig
 alias cs="gcc -ggdb -pedantic-errors -Wall -Wextra -Wconversion -Wsign-conversion"
 alias cvs="gcc -ggdb -pedantic-errors -Wall -Wextra -Wconversion -Wsign-conversion -Werror"
 # for gtk4
-alias ggcc='gcc `pkg-config --cflags gtk4` $1 `pkg-config --libs gtk4`'
+# alias ggcc='gcc `pkg-config --cflags gtk4` $1 `pkg-config --libs gtk4`'
 # leetcode related
 alias lte='leetcode exec'
 alias ltt='leetcode test'
