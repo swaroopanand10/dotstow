@@ -9,3 +9,6 @@ user_pref("browser.tabs.inTitlebar", 0);
 
 // enabling css
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+user_pref("layout.css.has-selector.enabled", true);
+user_pref("ui.key.menuAccessKeyFocuses", false);
+user_pref("ui.key.menuAccessKey", -1);

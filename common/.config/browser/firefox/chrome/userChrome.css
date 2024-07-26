@@ -10,6 +10,12 @@
   background-color: #000000 !important;
 }
 
+/*this rule removes white border*/
+#nav-bar,
+#navigator-toolbox {
+  border-width: 0px !important;
+}
+
 .tab-background[selected] {
   background: #000 !important;
   border: 1px solid rgb(160, 160, 255);
@@ -27,11 +33,15 @@
 }
 
 /* just removing some unnecessary things, but these things might break after some firefox update. */
-#firefox-view-button,#save-to-pocket-button,#fxa-toolbar-menu-button,#reader-mode-button{
+#firefox-view-button,
+#save-to-pocket-button,
+#fxa-toolbar-menu-button,
+#reader-mode-button {
   display: none;
 }
 
-#tabbrowser-tabs{ /* will remove the border,padding and margin on top left */
+#tabbrowser-tabs {
+  /* will remove the border,padding and margin on top left */
   border-inline-start: none !important;
   padding-inline-start: none !important;
   margin-inline-start: none !important;
@@ -41,3 +51,46 @@
 /* #customizableui-special-spring1,#customizableui-special-spring2{ */
 /*   display: none; */
 /* } */
+
+/* make sidebar black color */
+:root {
+  --lwt-sidebar-background-color: #000000 !important;
+}
+
+#sidebar-box {
+  background-color: var(--lwt-sidebar-background-color) !important;
+}
+
+/* vertical tabs settings */
+
+/*this will always keep the horizontal tab bar hidden*/
+#main-window #TabsToolbar {
+  visibility: collapse;
+}
+
+/*toggle the horizontal bar depending on whether sidebar is open or not*/
+/*html#main-window body:has(#sidebar-box[sidebarcommand=treestyletab_piro_sakura_ne_jp-sidebar-action][checked=true]:not([hidden=true])) #TabsToolbar {*/
+/*  visibility: collapse !important;*/
+/*}*/
+
+/* Sidebar min and max width removal */
+#sidebar-box {
+  max-width: none !important;
+  min-width: 0px !important;
+}
+
+/* Hide splitter, when using Tree Style Tab. */
+/*#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]+#sidebar-splitter {*/
+/*  display: none !important;*/
+/* Hide sidebar header, when using Tree Style Tab. */
+/*}*/
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  visibility: collapse;
+}
+
+#tabbar {
+  border: 0;
+  overflow-y: scroll !important;
+  margin-left: -18px !important;
+}

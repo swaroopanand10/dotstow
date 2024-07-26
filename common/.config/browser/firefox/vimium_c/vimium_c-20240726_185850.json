@@ -1,0 +1,29 @@
+{
+	"name": "Vimium C",
+	"@time": "7/26/2024, 6:58:50 PM",
+	"time": 1722000530125,
+	"environment": {
+		"extension": "1.99.997",
+		"platform": "linux",
+		"firefox": 127
+	},
+	"exclusionRules": [],
+	"keyLayout": 2,
+	"keyMappings": [
+		"#!no-check",
+		"mapKey <a-w> <esc>",
+		"map <a-e> LinkHints.activateWithQueue",
+		"map <a-f> Vomnibar.activateTabs",
+		"mapKey <a-b> <^>",
+		"mapKey <a-a> <i>",
+		"map J nextTab",
+		"map K previousTab",
+		"# mapKey <e> <i>",
+		"# unmap f",
+		""
+	],
+	"keyupTime": 110,
+	"linkHintCharacters": "asdjklewcmoghurn",
+	"scrollStepSize": 55,
+	"vimSync": true
+}

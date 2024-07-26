@@ -24,3 +24,47 @@ body {
 /*     background-color: #000000 !important; */
 /*   } */
 /* } */
+
+/* internal settings for treestyletabs */
+@-moz-document regexp("moz-extension://.+/sidebar/sidebar.html.*") {
+
+  :root {
+    /*this will remove the background color from active tab*/
+    --non-lwt-selected-tab-background-color-proton: #000000 !important;
+  }
+
+  /*this will add background color to whole tst side bar*/
+  #tabbar {
+    background-color: rgb(0, 0, 0) !important;
+    /* https://github.com/piroor/treestyletab/blob/0eede581d763f92344fe64b1c042839f3b8ca955/webextensions/resources/ui-color.css#L198 */
+  }
+
+  /*remove the close button*/
+  tab-item .closebox {
+    visibility: collapse;
+  }
+
+  /*only show close button on hover*/
+  tab-item:hover .closebox {
+    visibility: initial;
+  }
+
+  /*add the border to current tab*/
+  tab-item.active {
+    border: 2px solid #52b0ef;
+  }
+
+  /*tab-item.active tab-item-substance {*/
+  /*  height: 39px !important;*/
+  /*}*/
+  /**/
+  /*tab-item.active .background {*/
+  /*  color: #000000 !important;*/
+  /*}*/
+
+  /*styling for active tab font*/
+  tab-item.active .label-content {
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
