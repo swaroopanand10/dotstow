@@ -68,6 +68,11 @@ ltl() {
 	leetcode l | fzf
 }
 
+# for gtk4
+ggcc(){
+  gcc $(pkg-config --cflags gtk4) "$1" $(pkg-config --libs gtk4)
+}
+
 source ~/.config/zsh/find-based-functions.sh
 source ~/.config/zsh/fd-based-functions.sh
 source ~/.config/zsh/grep-rg-based-functions.sh
