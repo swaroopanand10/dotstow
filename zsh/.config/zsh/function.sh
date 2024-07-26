@@ -82,6 +82,15 @@ run() {
     done
 }
 
+# run zoxide add command 'n' number of times
+rnz() {
+    number=$1
+    shift
+    for i in $(seq "$number"); do
+      zoxide add .
+    done
+}
+
 source ~/.config/zsh/find-based-functions.sh
 source ~/.config/zsh/fd-based-functions.sh
 source ~/.config/zsh/grep-rg-based-functions.sh
